@@ -1,135 +1,148 @@
 /* General styles */
 
 @import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+/* General body styles */
 body {
-    font-family: 'PP Neue Montreal', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #022425;
-    color: #fff;
-    line-height: 1.6;
-  }
-  
-  .navigation-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px 10px;
-    background-color: #022425;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure the header is on top of other content */
-  }
-  
-  .navigation-container {
-    padding: 16px 0;
-    position: relative;
-    background-color: #022425;
+  font-family: 'PP Neue Montreal', sans-serif; /* Sets the primary font for the webpage */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  background-color: #022425; /* Dark background color for the page */
+  color: #fff; /* Sets the text color to white */
+  line-height: 1.6; /* Improves readability by setting line spacing */
 }
 
+/* Navigation container styles */
+.navigation-container {
+  display: flex; /* Aligns child elements horizontally */
+  justify-content: space-between; /* Distributes space between child elements */
+  align-items: center; /* Centers child elements vertically */
+  width: 100%; /* Full width of the page */
+  padding: 20px 10px; /* Adds padding around the container */
+  background-color: #022425; /* Matches the page background color */
+  position: sticky; /* Keeps the header fixed at the top while scrolling */
+  top: 0; /* Ensures it's at the very top of the viewport */
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Additional styling for the navigation container */
+.navigation-container {
+  padding: 16px 0; /* Adjusts padding */
+  position: relative; /* Allows the container to be positioned relative to itself */
+  background-color: #022425; /* Dark background for navigation */
+}
+
+/* Link styles */
 .link:hover {
-    text-decoration: underline;
+  text-decoration: underline; /* Adds underline when hovered */
 }
 
 .link {
-    text-decoration: none;
-    font-weight: lighter;
-    color: #000;
+  text-decoration: none; /* Removes underline by default */
+  font-weight: lighter; /* Sets lighter font weight */
+  color: #000; /* Black text color for links */
 }
 
+/* Navigation layout styles */
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 32px;
+  display: flex; /* Aligns navigation items horizontally */
+  justify-content: space-between; /* Space between navigation items */
+  align-items: center; /* Vertically aligns items */
+  padding: 0 32px; /* Adds horizontal padding */
 }
 
-.line{
-    color:white
+/* Styling for a general line element */
+.line {
+  color: white; /* Sets line color to white */
 }
 
+/* Burger menu styles */
 .burger-menu {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    color:#F2FF58;   
-    margin-right: 16px;
+  display: flex; /* Aligns burger menu lines vertically */
+  flex-direction: column; /* Stacks lines in a column */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  color: #F2FF58; /* Yellow color for the menu */
+  margin-right: 16px; /* Adds space to the right */
 }
+
 .logo {
-    margin-left: 16px;
-    width: 90px;
-    height: 40px;
+  margin-left: 16px; /* Adds space to the left */
+  width: 90px; /* Width of the logo */
+  height: 40px; /* Height of the logo */
 }
+
+/* Active navigation menu styles */
 .navigation ul.active {
-    font-size: 24px;
-    display: flex;
-    list-style-type: none;
-    position: absolute;
-    flex-direction: column;
-    text-decoration: NONE;
-    width: 200px;
-    height: 324px;;
-    top: 55px;
-    right: 0;
-    background-color: #365549;
-    border-radius: 0px 0px 0px 23px ;
-    z-index: 1; /* the higher the number, the closer the element is to the user. Default = 0. I set it to one so that the burger menu items are above the logo */
-    padding-top: 80px;
-
+  font-size: 24px; /* Increases font size for active menu */
+  display: flex; /* Makes the menu visible */
+  list-style-type: none; /* Removes bullet points */
+  position: absolute; /* Positions menu relative to the nearest positioned ancestor */
+  flex-direction: column; /* Stacks menu items vertically */
+  text-decoration: none; /* Removes text decoration */
+  width: 200px; /* Fixed width for menu */
+  height: 324px; /* Fixed height for menu */
+  top: 55px; /* Positions the menu below the burger menu */
+  right: 0; /* Aligns the menu to the right */
+  background-color: #365549; /* Dark green background */
+  border-radius: 0px 0px 0px 23px; /* Rounds the bottom-left corner */
+  z-index: 1; /* Ensures the menu is above other elements */
+  padding-top: 80px; /* Adds padding at the top */
 }
 
+/* Default state of the navigation menu */
 .navigation ul {
-    display: none;
+  display: none; /* Hides the menu by default */
 }
 
-
+/* List item styles for navigation menu */
 .navigation ul li {
-    font-weight: lighter;
-    margin: 8px 0;
-    text-align: left;
-    margin-right: 16px;
+  font-weight: lighter; /* Sets lighter font weight */
+  margin: 8px 0; /* Adds vertical spacing */
+  text-align: left; /* Aligns text to the left */
+  margin-right: 16px; /* Adds spacing to the right */
 }
 
+/* Burger menu line styles */
 .burger-menu .line {
-    width: 25px;
-    height: 3px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    margin: 4px 0;
+  width: 25px; /* Sets width of each line */
+  height: 3px; /* Sets height of each line */
+  border-radius: 20px; /* Rounds the edges of each line */
+  background-color: #ffffff; /* White color for the lines */
+  margin: 4px 0; /* Adds spacing between lines */
 }
 
-
+/* Link styles */
 .link {
-    color: white;
-    
+  color: white; /* White text color for links */
 }
 
+/* Active link styles */
 .active-link {
-    font-weight: lighter;
-    color:#F2FF58;
-    background-color: #022425;
-    padding: 6px 20px;
-    text-decoration: none;
-    border-radius: 20px;
+  font-weight: lighter; /* Sets lighter font weight */
+  color: #F2FF58; /* Yellow text color */
+  background-color: #022425; /* Dark background for active links */
+  padding: 6px 20px; /* Adds padding for active links */
+  text-decoration: none; /* Removes underline */
+  border-radius: 20px; /* Rounds the corners of active links */
 }
 
+/* Transition effects for burger menu lines */
 .burger-menu .line {
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions for hover/active states */
 }
 
-/* Add animation effect for when the menu is active */
+/* Animation for active burger menu */
 .burger-menu.active .line:nth-child(1) {
-    transform: rotate(40deg) translate(10px, 10px);
+  transform: rotate(40deg) translate(10px, 10px); /* Rotates and moves the first line */
 }
 
 .burger-menu.active .line:nth-child(2) {
-    opacity: 0;
+  opacity: 0; /* Hides the second line */
 }
 
 .burger-menu.active .line:nth-child(3) {
-    transform: rotate(-40deg) translate(5px, -5px);
+  transform: rotate(-40deg) translate(5px, -5px); /* Rotates and moves the third line */
 }
+
 /* ----------------------------------------------------- */
 
   .hero {

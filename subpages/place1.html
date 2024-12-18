@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="navigation-container">
-        <a href="index.html"><img src="/images/logo.svg" alt="Logo" class="logo"></a>
+        <a href="/index.html"><img src="/images/logo.svg" alt="Logo" class="logo"></a>
         <nav class="navigation">
             <div class="burger-menu" id="burger-menu">
                 <div class="line"></div>
@@ -46,7 +46,7 @@
 
     </div>
     </section>
-<section>
+
     <div class="gallery">
         <div class="minimap">
             <div class="preview"></div>
@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-</section>
+
 <section>
     <div class="container">
         <h2>History</h2>
@@ -100,73 +100,77 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const numberOfImages = 8;
-    const minimap = document.querySelector(".minimap .preview");
-    const fullSizeContainer = document.querySelector(".images");
+    // Wait for the DOM content to load before executing the script
+    document.addEventListener("DOMContentLoaded", function () {
+    const numberOfImages = 8; // Number of images to generate
+    const minimap = document.querySelector(".minimap .preview"); // The container for thumbnails
+    const fullSizeContainer = document.querySelector(".images"); // The container for full-sized images
 
+    // Function to get a random position (left offset) for images from a predefined set of values
     function getRandomLeft() {
-        const values = [-15, -7.5, 0, 7.5, 15];
-        return values[Math.floor(Math.random() * values.length)] + 'px';
+        const values = [-15, -7.5, 0, 7.5, 15]; // Possible left offset values in pixels
+        return values[Math.floor(Math.random() * values.length)] + 'px'; // Pick a random value and add 'px' to it
     }
 
+    // Clear the minimap and full-size container to ensure they're empty
     minimap.innerHTML = '';
     fullSizeContainer.innerHTML = '';
 
-    let activeThumbnail = null;
+    let activeThumbnail = null; // Track the currently active thumbnail
 
+    // Loop through to create and configure images
     for (let i = 1; i <= numberOfImages; i++) {
-        const randomLeft = getRandomLeft();
-        const imagePath = `../images/img${i}.png`;
+        const randomLeft = getRandomLeft(); // Get a random left position for the current image
+        const imagePath = `../images/img${i}.png`; // Construct the path for the image
 
-        // Create thumbnail element
-        const thumbnailDiv = document.createElement('div');
-        thumbnailDiv.className = 'img-thumbnail';
-        thumbnailDiv.style.left = randomLeft;
-        const imgThumbnail = document.createElement('img');
-        imgThumbnail.src = imagePath;
-        thumbnailDiv.appendChild(imgThumbnail);
-        minimap.appendChild(thumbnailDiv);
+        // Create and configure the thumbnail element
+        const thumbnailDiv = document.createElement('div'); // Create a div for the thumbnail
+        thumbnailDiv.className = 'img-thumbnail'; // Add a CSS class to style the thumbnail
+        thumbnailDiv.style.left = randomLeft; // Set the random left offset for the thumbnail
+        const imgThumbnail = document.createElement('img'); // Create the img element for the thumbnail
+        imgThumbnail.src = imagePath; // Set the image source to the generated path
+        thumbnailDiv.appendChild(imgThumbnail); // Append the img element to the thumbnail div
+        minimap.appendChild(thumbnailDiv); // Append the thumbnail div to the minimap container
 
-        
-        // Create full-size image element
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'img';
-        imgDiv.style.left = randomLeft;
-        const imgFull = document.createElement('img');
-        imgFull.src = imagePath;
-        imgDiv.appendChild(imgFull);
-        fullSizeContainer.appendChild(imgDiv);
+        // Create and configure the full-size image element
+        const imgDiv = document.createElement('div'); // Create a div for the full-size image
+        imgDiv.className = 'img'; // Add a CSS class to style the full-size image
+        imgDiv.style.left = randomLeft; // Set the random left offset for the full-size image
+        const imgFull = document.createElement('img'); // Create the img element for the full-size image
+        imgFull.src = imagePath; // Set the image source to the generated path
+        imgDiv.appendChild(imgFull); // Append the img element to the full-size image div
+        fullSizeContainer.appendChild(imgDiv); // Append the full-size image div to the full-size container
 
-        // Register GSAP ScrollTrigger plugin and attach scroll behavior
+        // Register the GSAP ScrollTrigger plugin to animate elements on scroll
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.create({
-            trigger: imgDiv,
-            start: "top center",
-            end: "bottom center",
-            onToggle: self => {
-                if (self.isActive) {
+            trigger: imgDiv, // The full-size image div acts as the trigger
+            start: "top center", // Animation starts when the top of the div reaches the center of the viewport
+            end: "bottom center", // Animation ends when the bottom of the div leaves the center of the viewport
+            onToggle: self => { // Callback for when the scroll trigger is activated or deactivated
+                if (self.isActive) { // If the trigger is active (element is in view)
+                    // Reset the previously active thumbnail, if any
                     if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
                         animateThumbnail(activeThumbnail, false);
                     }
-
+                    // Animate the current thumbnail to highlight it
                     animateThumbnail(thumbnailDiv, true);
-                    activeThumbnail = thumbnailDiv;
-                } else if (activeThumbnail === thumbnailDiv) {
-                    animateThumbnail(thumbnailDiv, false);
+                    activeThumbnail = thumbnailDiv; // Set the current thumbnail as active
+                } else if (activeThumbnail === thumbnailDiv) { // If the trigger is deactivated for the active thumbnail
+                    animateThumbnail(thumbnailDiv, false); // Reset the thumbnail to its default state
                 }
             }
-            
         });
     }
 
+    // Function to animate the thumbnail based on its active state
     function animateThumbnail(thumbnail, isActive) {
-        gsap.to(thumbnail, {
-            border: isActive ? '1px solid #F2FF58' : 'none',
-            opacity: isActive ? 1 : 0.5,
-            scale: isActive ? 1.1 : 1,
-            zIndex: isActive ? 10000 : 1,
-            duration: 0.3
+        gsap.to(thumbnail, { // Use GSAP to animate the thumbnail
+            border: isActive ? '1px solid #F2FF58' : 'none', // Highlight border if active, otherwise remove it
+            opacity: isActive ? 1 : 0.5, // Full opacity if active, otherwise dim it
+            scale: isActive ? 1.1 : 1, // Slightly enlarge if active, otherwise keep it normal
+            zIndex: isActive ? 10000 : 1, // Bring to the front if active, otherwise reset the z-index
+            duration: 0.3 // Duration of the animation in seconds
         });
     }
 });
