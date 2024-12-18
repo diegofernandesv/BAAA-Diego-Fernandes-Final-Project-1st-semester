@@ -82,27 +82,27 @@
 }
 
 .navbar-map .link:nth-child(1) {
-    background-image: url('/images/buttonQQ.png');
+    background-image: url('../images/buttonQQ.png');
 }
 
 .navbar-map .link:nth-child(2) {
-    background-image: url('/images/buttonLA.png');
+    background-image: url('../images/buttonLA.png');
 }
 
 .navbar-map .link:nth-child(3) {
-    background-image: url('/images/buttonOC.png');
+    background-image: url('../images/buttonOC.png');
 }
 
 .navbar-map .active-link:nth-child(1) {
-    background-image: url('/images/buttonQQ.png'); 
+    background-image: url('../images/buttonQQ.png'); 
 }
 
 .navbar-map .active-link:nth-child(2) {
-    background-image: url('/images/buttonLA.png');
+    background-image: url('../images/buttonLA.png');
 }
 
 .navbar-map .active-link:nth-child(3) {
-    background-image: url('/images/buttonOC.png');
+    background-image: url('../images/buttonOC.png');
 }
 
 
