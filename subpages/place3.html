@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Cable Car</title>
+  <link rel="stylesheet" href="../css/place.css">
+</head>
+<body>
+    <header class="navigation-container">
+        <a href="index.html"><img src="/images/logo.svg" alt="Logo" class="logo"></a>
+        <nav class="navigation">
+            <div class="burger-menu" id="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html" class="link">Home</a></li>
+                <li><a href="explore.html" class="active-link">Explore</a></li>
+                <li><a href="map.html" class="link">Map</a></li>
+                <li><a href="safetytips.html" class="link">Safety Tips</a></li>
+            </ul>
+            <div class="extra">
+            <ul class="time" id="time">
+                <li id="current-time"></li>
+            </ul>
+            <ul class="temperature" id="temperature">
+                <li id="current-temperature">Loading...</li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+<main>
+    <div class="go-back">
+        <button onclick="history.back()">Go Back</button>
+    </div>
+
+
+    <section class="upper-text">
+    <div class="container">
+        <h2>Old Cable Car</h2>
+        <p>El Lirón is a historic substation nestled in the heart of Ávila National Park, once part of the iconic Teleférico del Ávila system that connected Caracas with the coastal region. Inaugurated in 1956 during the government of General Marcos Pérez Jiménez, the station played a crucial role in managing the movement of cable car cabins as they traveled between the Ávila peaks and the Litoral. Today, while the cable car system has been inactive for decades, El Lirón remains a symbol of the region’s rich history, offering visitors a glimpse into the past and the stunning vistas of the Caracas coastline.</p>
+    </div>
+    </section>
+
+    <div class="gallery">
+        <div class="minimap">
+            <div class="preview"></div>
+        </div>
+        <div class="images">
+            <div class="img">
+                <img src="/images/img1.png" alt="Quebrada quintero 1">
+            </div>
+            <div class="img">
+                <img src="/images/img2.png" alt="Quebrada quintero 2">
+            </div>
+            <div class="img">
+                <img src="/images/img3.png" alt="Quebrada quintero 3">
+            </div>
+            <div class="img">
+                <img src="/images/img4.png" alt="Quebrada quintero 4">
+            </div>
+            <div class="img">
+                <img src="/images/img5.png" alt="Quebrada quintero 5">
+            </div>
+            <div class="img">
+                <img src="/images/img6.png" alt="Quebrada quintero 6">
+            </div>
+            <div class="img">
+                <img src="/images/img7.png" alt="Quebrada quintero 7">
+            </div>
+            <div class="img">
+                <img src="/images/img8.png" alt="Quebrada quintero 8">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>History</h2>
+        <p>According to legend, which is confirmed by some residents of Galipán, the site is known as the "ghost cable car" because those who have dared to visit at night have witnessed paranormal events. The most common occurrence is seeing the cabins moving along the cables, despite the fact that the cables are now completely deteriorated. In 2003, one of the cabins even became stuck in the middle of its route, and it has remained there ever since. Whether this is true or just a legend, what is undeniable is the mysterious energy felt at the site.</p>
+        <p class="p1">Many who have ventured to the site describe an eerie atmosphere, where time seems to stand still. The air is thick with a sense of history, and the old, rusting infrastructure evokes a haunting image of what once was. Some visitors claim to hear faint sounds of the cable cars operating in the distance, or the creaking of old metal as if the system were still running, despite the silence. The decaying cabins, with their weathered exteriors, add to the mystique, as they remain stuck in place, frozen in time. Whether it’s the remnants of a once-thriving transport system or the whispers of something supernatural, El Lirón continues to captivate the imagination, leaving those who visit with an unshakable sense of wonder and intrigue.</p>
+
+    
+    </div>
+</main>
+    <footer class="footer">
+        <p>© 2024 Visit Caracas | Follow us: 
+          <a href="#">Instagram</a> | <a href="#">Facebook</a>
+        </p>
+      </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const numberOfImages = 8;
+    const minimap = document.querySelector(".minimap .preview");
+    const fullSizeContainer = document.querySelector(".images");
+
+    function getRandomLeft() {
+        const values = [-15, -7.5, 0, 7.5, 15];
+        return values[Math.floor(Math.random() * values.length)] + 'px';
+    }
+
+    minimap.innerHTML = '';
+    fullSizeContainer.innerHTML = '';
+
+    let activeThumbnail = null;
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        const randomLeft = getRandomLeft();
+        const imagePath = `../images/img${i}.png`;
+
+        // Create thumbnail element
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.className = 'img-thumbnail';
+        thumbnailDiv.style.left = randomLeft;
+        const imgThumbnail = document.createElement('img');
+        imgThumbnail.src = imagePath;
+        thumbnailDiv.appendChild(imgThumbnail);
+        minimap.appendChild(thumbnailDiv);
+
+        // Create full-size image element
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'img';
+        imgDiv.style.left = randomLeft;
+        const imgFull = document.createElement('img');
+        imgFull.src = imagePath;
+        imgDiv.appendChild(imgFull);
+        fullSizeContainer.appendChild(imgDiv);
+
+        // Register GSAP ScrollTrigger plugin and attach scroll behavior
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            trigger: imgDiv,
+            start: "top center",
+            end: "bottom center",
+            onToggle: self => {
+                if (self.isActive) {
+                    if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
+                        animateThumbnail(activeThumbnail, false);
+                    }
+
+                    animateThumbnail(thumbnailDiv, true);
+                    activeThumbnail = thumbnailDiv;
+                } else if (activeThumbnail === thumbnailDiv) {
+                    animateThumbnail(thumbnailDiv, false);
+                }
+            }
+        });
+    }
+
+    function animateThumbnail(thumbnail, isActive) {
+        gsap.to(thumbnail, {
+            border: isActive ? '1px solid #F2FF58' : 'none',
+            opacity: isActive ? 1 : 0.5,
+            scale: isActive ? 1.1 : 1,
+            zIndex: isActive ? 10000 : 1,
+            duration: 0.3
+        });
+    }
+});
+    </script>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/time.js"></script>
+  <script src="/js/temperature.js"></script>
+
+</body>
+</html>

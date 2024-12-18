@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagunazo</title>
+  <link rel="stylesheet" href="../css/place.css">
+</head>
+<body>
+    <header class="navigation-container">
+        <a href="index.html"><img src="/images/logo.svg" alt="Logo" class="logo"></a>
+        <nav class="navigation">
+            <div class="burger-menu" id="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html" class="link">Home</a></li>
+                <li><a href="explore.html" class="active-link">Explore</a></li>
+                <li><a href="map.html" class="link">Map</a></li>
+                <li><a href="safetytips.html" class="link">Safety Tips</a></li>
+            </ul>
+            <div class="extra">
+            <ul class="time" id="time">
+                <li id="current-time"></li>
+            </ul>
+            <ul class="temperature" id="temperature">
+                <li id="current-temperature">Loading...</li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+<main>
+    <div class="go-back">
+        <button onclick="history.back()">Go Back</button>
+    </div>
+
+
+    <section class="upper-text">
+    <div class="container">
+        <h2>Lagunazo</h2>
+        <p>Lagunazo is a tranquil camping spot nestled in the heart of El Ávila National Park, offering a perfect escape for nature enthusiasts. Surrounded by lush forests and featuring a serene lagoon, it provides an ideal setting for relaxation and stargazing. Accessible via a scenic trail, this hidden gem invites visitors to connect with the untouched beauty of the park and enjoy a peaceful retreat under the stars.</p>
+    </div>
+    </section>
+
+    <div class="gallery">
+        <div class="minimap">
+            <div class="preview"></div>
+        </div>
+        <div class="images">
+            <div class="img">
+                <img src="/images/imag1.png" alt="Quebrada quintero 1">
+            </div>
+            <div class="img">
+                <img src="/images/imag2.png" alt="Quebrada quintero 2">
+            </div>
+            <div class="img">
+                <img src="/images/imag3.png" alt="Quebrada quintero 3">
+            </div>
+            <div class="img">
+                <img src="/images/imag4.png" alt="Quebrada quintero 4">
+            </div>
+            <div class="img">
+                <img src="/images/imag5.png" alt="Quebrada quintero 5">
+            </div>
+            <div class="img">
+                <img src="/images/imag6.png" alt="Quebrada quintero 6">
+            </div>
+            <div class="img">
+                <img src="/images/imag7.png" alt="Quebrada quintero 7">
+            </div>
+            <div class="img">
+                <img src="/images/imag8.png" alt="Quebrada quintero 8">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>History</h2>
+        <p>The name "Lagunazo" is believed to originate from the fact that, thousands of years ago, the area was likely a glacial lagoon, although no signs of a lagoon remain today. The site offers expansive grounds for camping and stunning views, making it a noteworthy spot in El Ávila National Park.</p>
+        <p>Lagunazo is also known for its year-round water source and serves as the starting point for the central section of the Fila Maestra, which passes through the Oriental, Occidental, and Naiguata peaks. Over the years, it has become a significant stop for hikers and nature lovers exploring the park. The area’s breathtaking views, including sights of Galipán’s Picacho peak and the Puerto de La Guaira, make it a memorable destination in the heart of El Ávila.</p>
+
+    
+    </div>
+</main>
+    <footer class="footer">
+        <p>© 2024 Visit Caracas | Follow us: 
+          <a href="#">Instagram</a> | <a href="#">Facebook</a>
+        </p>
+      </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const numberOfImages = 8;
+    const minimap = document.querySelector(".minimap .preview");
+    const fullSizeContainer = document.querySelector(".images");
+
+    function getRandomLeft() {
+        const values = [-15, -7.5, 0, 7.5, 15];
+        return values[Math.floor(Math.random() * values.length)] + 'px';
+    }
+
+    minimap.innerHTML = '';
+    fullSizeContainer.innerHTML = '';
+
+    let activeThumbnail = null;
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        const randomLeft = getRandomLeft();
+        const imagePath = `../images/imag${i}.png`;
+
+        // Create thumbnail element
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.className = 'img-thumbnail';
+        thumbnailDiv.style.left = randomLeft;
+        const imgThumbnail = document.createElement('img');
+        imgThumbnail.src = imagePath;
+        thumbnailDiv.appendChild(imgThumbnail);
+        minimap.appendChild(thumbnailDiv);
+
+        // Create full-size image element
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'img';
+        imgDiv.style.left = randomLeft;
+        const imgFull = document.createElement('img');
+        imgFull.src = imagePath;
+        imgDiv.appendChild(imgFull);
+        fullSizeContainer.appendChild(imgDiv);
+
+        // Register GSAP ScrollTrigger plugin and attach scroll behavior
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            trigger: imgDiv,
+            start: "top center",
+            end: "bottom center",
+            onToggle: self => {
+                if (self.isActive) {
+                    if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
+                        animateThumbnail(activeThumbnail, false);
+                    }
+
+                    animateThumbnail(thumbnailDiv, true);
+                    activeThumbnail = thumbnailDiv;
+                } else if (activeThumbnail === thumbnailDiv) {
+                    animateThumbnail(thumbnailDiv, false);
+                }
+            }
+        });
+    }
+
+    function animateThumbnail(thumbnail, isActive) {
+        gsap.to(thumbnail, {
+            border: isActive ? '1px solid #F2FF58' : 'none',
+            opacity: isActive ? 1 : 0.5,
+            scale: isActive ? 1.1 : 1,
+            zIndex: isActive ? 10000 : 1,
+            duration: 0.3
+        });
+    }
+});
+    </script>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/time.js"></script>
+  <script src="/js/temperature.js"></script>
+
+</body>
+</html>

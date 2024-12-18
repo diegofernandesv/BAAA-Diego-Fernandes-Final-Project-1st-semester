@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebrada Quintero</title>
+  <link rel="stylesheet" href="../css/place.css">
+</head>
+<body>
+    <header class="navigation-container">
+        <a href="index.html"><img src="/images/logo.svg" alt="Logo" class="logo"></a>
+        <nav class="navigation">
+            <div class="burger-menu" id="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html" class="link">Home</a></li>
+                <li><a href="explore.html" class="active-link">Explore</a></li>
+                <li><a href="map.html" class="link">Map</a></li>
+                <li><a href="safetytips.html" class="link">Safety Tips</a></li>
+            </ul>
+            <div class="extra">
+            <ul class="time" id="time">
+                <li id="current-time"></li>
+            </ul>
+            <ul class="temperature" id="temperature">
+                <li id="current-temperature">Loading...</li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+<main>
+    <div class="go-back">
+        <button onclick="history.back()">Go Back</button>
+    </div>
+
+
+    <section class="upper-text">
+    <div class="container">
+        <h2>Quebrada Quintero</h2>
+        <p class="p2">Level of dificulty : Medium <br>Duration : 1.5-2 hours<br>Height : 1070 meters </p>
+        <p>Quebrada Quintero is a hidden gem tucked away in the lush landscapes of El Ávila National Park. Known only to a few adventurous explorers, this tranquil waterfall offers an unparalleled escape into nature.Surrounded by dense greenery and accessible via a little-known trail, it feels like stepping into a secret paradise. The crystal-clear waters cascade gently over the rocks, creating a serene atmosphere perfect for those seeking peace and solitude. Its untouched beauty makes it a rare find, ideal for hikers who want to discover a quieter side of El Ávila, away from the crowds.</p>
+
+    </div>
+    </section>
+<section>
+    <div class="gallery">
+        <div class="minimap">
+            <div class="preview"></div>
+        </div>
+        <div class="images">
+            <div class="img">
+                <img src="/images/img1.png" alt="Quebrada quintero 1">
+            </div>
+            <div class="img">
+                <img src="/images/img2.png" alt="Quebrada quintero 2">
+            </div>
+            <div class="img">
+                <img src="/images/img3.png" alt="Quebrada quintero 3">
+            </div>
+            <div class="img">
+                <img src="/images/img4.png" alt="Quebrada quintero 4">
+            </div>
+            <div class="img">
+                <img src="/images/img5.png" alt="Quebrada quintero 5">
+            </div>
+            <div class="img">
+                <img src="/images/img6.png" alt="Quebrada quintero 6">
+            </div>
+            <div class="img">
+                <img src="/images/img7.png" alt="Quebrada quintero 7">
+            </div>
+            <div class="img">
+                <img src="/images/img8.png" alt="Quebrada quintero 8">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2>History</h2>
+        <p>Quebrada Quintero has long been part of the rich natural tapestry of El Ávila National Park, quietly flowing through the mountains for centuries. Though its beauty remains relatively unknown to most visitors, it has historically been a vital source of fresh water for nearby communities and wildlife. The name "Quebrada Quintero" likely originated from the local settlers who lived in harmony with the park’s abundant natural resources.</p>
+        <p>Over time, it became a secluded retreat for a small number of nature enthusiasts who valued its tranquility and untouched charm. Unlike more popular destinations in El Ávila, Quebrada Quintero has largely escaped development, retaining its pristine and raw appeal. Its hidden location and the stories told by locals about its serene beauty have helped cement its place as a secret haven in the heart of the park.</p>
+
+    </div>
+</section>
+
+
+</main>
+    <footer class="footer">
+        <p>© 2024 Visit Caracas | Follow us: 
+          <a href="#">Instagram</a> | <a href="#">Facebook</a>
+        </p>
+      </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const numberOfImages = 8;
+    const minimap = document.querySelector(".minimap .preview");
+    const fullSizeContainer = document.querySelector(".images");
+
+    function getRandomLeft() {
+        const values = [-15, -7.5, 0, 7.5, 15];
+        return values[Math.floor(Math.random() * values.length)] + 'px';
+    }
+
+    minimap.innerHTML = '';
+    fullSizeContainer.innerHTML = '';
+
+    let activeThumbnail = null;
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        const randomLeft = getRandomLeft();
+        const imagePath = `../images/img${i}.png`;
+
+        // Create thumbnail element
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.className = 'img-thumbnail';
+        thumbnailDiv.style.left = randomLeft;
+        const imgThumbnail = document.createElement('img');
+        imgThumbnail.src = imagePath;
+        thumbnailDiv.appendChild(imgThumbnail);
+        minimap.appendChild(thumbnailDiv);
+
+        
+        // Create full-size image element
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'img';
+        imgDiv.style.left = randomLeft;
+        const imgFull = document.createElement('img');
+        imgFull.src = imagePath;
+        imgDiv.appendChild(imgFull);
+        fullSizeContainer.appendChild(imgDiv);
+
+        // Register GSAP ScrollTrigger plugin and attach scroll behavior
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            trigger: imgDiv,
+            start: "top center",
+            end: "bottom center",
+            onToggle: self => {
+                if (self.isActive) {
+                    if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
+                        animateThumbnail(activeThumbnail, false);
+                    }
+
+                    animateThumbnail(thumbnailDiv, true);
+                    activeThumbnail = thumbnailDiv;
+                } else if (activeThumbnail === thumbnailDiv) {
+                    animateThumbnail(thumbnailDiv, false);
+                }
+            }
+            
+        });
+    }
+
+    function animateThumbnail(thumbnail, isActive) {
+        gsap.to(thumbnail, {
+            border: isActive ? '1px solid #F2FF58' : 'none',
+            opacity: isActive ? 1 : 0.5,
+            scale: isActive ? 1.1 : 1,
+            zIndex: isActive ? 10000 : 1,
+            duration: 0.3
+        });
+    }
+});
+    </script>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/time.js"></script>
+  <script src="/js/temperature.js"></script>
+
+</body>
+</html>

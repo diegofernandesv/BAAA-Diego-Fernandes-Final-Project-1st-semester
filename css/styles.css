@@ -1,0 +1,709 @@
+/* General styles */
+
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+body {
+    font-family: 'PP Neue Montreal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #022425;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #022425;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header is on top of other content */
+  }
+  
+  .navigation-container {
+    padding: 16px 0;
+    position: relative;
+    background-color: #022425;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: lighter;
+    color: #000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.line{
+    color:white
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    color:#F2FF58;   
+    margin-right: 16px;
+}
+.logo {
+    margin-left: 16px;
+    width: 90px;
+    height: 40px;
+}
+.navigation ul.active {
+    font-size: 24px;
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+    flex-direction: column;
+    text-decoration: NONE;
+    width: 200px;
+    height: 324px;;
+    top: 55px;
+    right: 0;
+    background-color: #365549;
+    border-radius: 0px 0px 0px 23px ;
+    z-index: 1; /* the higher the number, the closer the element is to the user. Default = 0. I set it to one so that the burger menu items are above the logo */
+    padding-top: 80px;
+
+}
+
+.navigation ul {
+    display: none;
+}
+
+
+.navigation ul li {
+    font-weight: lighter;
+    margin: 8px 0;
+    text-align: left;
+    margin-right: 16px;
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 4px 0;
+}
+
+
+.link {
+    color: white;
+    
+}
+
+.active-link {
+    font-weight: lighter;
+    color:#F2FF58;
+    background-color: #022425;
+    padding: 6px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.burger-menu .line {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add animation effect for when the menu is active */
+.burger-menu.active .line:nth-child(1) {
+    transform: rotate(40deg) translate(10px, 10px);
+}
+
+.burger-menu.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .line:nth-child(3) {
+    transform: rotate(-40deg) translate(5px, -5px);
+}
+/* ----------------------------------------------------- */
+
+  .hero {
+    display: flex;
+    align-items: left;
+    text-align: left;
+    padding: 50px 20px;
+    z-index: 100;
+  }
+
+  .hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    width: 394px;
+    height: 250px;
+  }
+  
+  .hero-container img {
+    width: 100%;
+    height: 100%; 
+    position: absolute; 
+    left: 0;
+    z-index: -1000;
+  }
+
+  .hero-content {
+    text-align: left;
+    z-index: 20;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    font-weight:500;
+    line-height: 24px;
+  }
+
+  .hero-content p {
+    max-width: 200px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  
+  .hero .highlight {
+    color: #F2FF58;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .avilamap {
+    margin-left: -160px;
+    max-width: 100%;
+    scale :31%;
+    top: -280px;
+    z-index: -1; 
+    position: absolute; 
+  }
+  
+  .btn-primary {
+    position: relative;
+    top:-32px;
+    font-size: 10px;
+    width: 145px;
+    height: 22px;
+    background-color: #F2FF58;
+    border: none;
+    border-radius: 5px;
+    color: #022425;
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: 500;
+    margin-left: 210px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+
+.btn-primary:hover {
+    transform: translateY(-5px); /* Moves the button up slightly */
+    color:#F2FF58;
+    background-color:#022425;; /* Changes the background color */
+  }
+  
+  .btn-primary:active {
+    transform: translateY(2px); /* Press effect */
+  }
+
+  .hero-content{
+    margin-top: -20px;
+    z-index: 100;
+  }
+
+
+  .about, .activities, .sustainability {
+    padding: 40px 20px;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 9px;
+  }
+  
+  .about h2 {
+    font-weight: 500;
+    color:#F2FF58;
+    font-size: 24px;
+  }
+
+  .paragraph-1{
+    margin-top: -20px;
+    max-width: 172px;
+    font-family: 'PP Neue Montreal', sans-serif;
+  }
+
+  .paragraph-2{
+    text-align: right;
+    margin-left: 205px;
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: 400;
+  }
+
+  .about{
+    padding: 40px 20px;
+    position: relative; 
+    z-index: 10; 
+    top:-80px;
+
+  }
+ 
+  .image1 {
+    width: 172px;
+    height: 96.17px ;
+    margin-left: 179px;
+    margin-top: -100px;
+    margin-right: 16px;
+  }
+
+  .image-2 {
+    width: 181.98px;
+    height: 96.17px ;
+    margin-left:0px;
+    margin-top: -120px;
+    margin-right: 16px;
+  }
+
+  .activities h2 {
+    font-weight: 500;
+    color:#ffffff;
+    margin-top: -120px;
+    line-height: 20px;
+  }
+
+  .activities .highlight {
+    color:#F2FF58;
+  }
+
+  
+  .activity-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 219px;
+    height: 344px;
+
+  }
+
+  .card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 219px;
+    height: 344px;
+    margin-top: 20px;
+  }
+  
+  .card-content h2 {
+    font-size: 36px;
+    line-height: 30px;
+    margin-top: -210px;
+    margin-left: 16px;
+  }
+
+  .card-content ul {
+    margin-top: -20px;
+    margin-left: -16px;
+    margin-top: -20px;
+  }
+
+  .card-content ul li {
+    list-style-type: none;
+  }
+
+  .card-content button {
+    width:190px;
+    height: 27px;
+    margin-left: 16px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .card-content button:hover {
+    transform: translateY(-2px); /* Moves the button up slightly */
+    color:#F2FF58;
+    background-color:#022425;; /* Changes the background color */
+  }
+  
+  .card-content button:active {
+    transform: translateY(1px); /* Press effect */
+  }
+
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    position: relative; /* Needed for pseudo-elements */
+  }
+
+  
+  .container-for-cards {
+    flex: 0 0 auto; /* Allow the cards to shrink and scroll */
+    scroll-snap-align: center; /* Center align each card during scrolling */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-inner::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+  .carousel-inner {
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+
+  .sustainability {
+    background-color: #365549;
+    
+  }
+  
+  .sustainability h2 {
+    margin-top: 10px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .sustainability h2 .highlight{
+    font-size:18px;
+    color:#F2FF58;
+  }
+  
+  .sustainability-tips {
+    margin-left: -8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding around the container */
+    max-width: 70%; /* Limit width for better readability */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Each tip item */
+.sustainability-tips li {
+    list-style-type: none; /* Remove bullet points */
+    text-align: center; /* Center text */
+    font-size: 8px;
+    padding: 20px; /* Padding around each tip */
+    border-radius: 10px; /* Rounded corners for each tip */
+}
+
+/* Icon styling */
+.tip-icon {
+    display: block; /* Block to center within the list item */
+    width: 50px; /* Size of icons */
+    height: 50px;
+    color:#F2FF58;
+    margin: 0 auto 10px; /* Center the icon and add space below */
+}
+
+/* Text styling within each tip */
+.sustainability-tips li {
+  width: 120px;
+    font-size: 16px; /* Adjust text size */
+    line-height: 1.5; /* Improve readability with better spacing */
+}
+  
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#022425;
+  }
+  
+  .footer a {
+    color: #F2FF58;
+    text-decoration: none;
+  }
+  
+  
+  /* For Desktop */
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px;
+      line-height: 2;
+    }
+
+    .logo {
+      width: 145px;
+      height: 54px;
+    }
+    .navigation-container {
+      padding: 10px 20px;
+      width: 100%;
+    }
+    
+    .logo {
+      margin-left: 138px;
+    }
+
+    .burger-menu {
+      display: none;
+  }
+    
+    .navigation {
+      width: 100%; /* Ensure the navigation container takes up the full width */
+    }
+    
+    .navigation ul {
+      display: flex; /* Ensure the list is displayed on large screens */
+      font-size: 18px;
+      list-style-type: none;
+      gap: 20px;
+      position: relative;
+      justify-content: flex-end;
+      margin-right: 138px;
+    }
+    
+    .extra {
+      display: flex; /* Ensure the list is displayed on large screens */
+      font-size: 18px;
+      list-style-type: none;
+      gap: 20px;
+      position: relative;
+      justify-content: flex-end;
+      margin-right: 87.5px;
+    }
+    
+    .nav-links {
+      width: 50%;
+      position: fixed;
+
+    }
+    
+    .time {
+      margin-left: -40px;
+    }
+    
+    .icon {
+      width: 25%;
+      position: relative;
+    }
+    
+    .hero-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-container img {
+      margin-top: 0px;
+      width: 100%;
+      filter: blur(1px);
+    }
+    
+    .hero-content {
+
+      margin-left: 138px;
+    }
+    
+    .hero-content h1 {
+      font-size: 64px;
+      line-height: 55px;
+    }
+    
+    .hero-content .highlight {
+      font-size: 64px;
+    }
+    
+    .hero-content p {
+      margin-top: -25px;
+      max-width: 500px;
+      font-size: 18px;
+      margin-bottom: -12.5px;
+    }
+    
+    .btn-primary {
+      position: relative;
+      top: -50px;
+      font-size: 18px;
+      width: 400px;
+      height: 50px;
+      border-radius: 10px;
+      margin-left: 750px;
+    }
+    
+    .avilamap {
+      transform: scale(4);
+      margin-top: 230px;
+      margin-left:72px;
+  
+    }
+    
+    .about, .activities, .sustainability {
+      padding: 20px 15px;
+    }
+    
+    .about h2 {
+      margin-top: 180px;
+      font-size: 64px;
+      margin-left: 138px;
+    }
+    
+    .paragraph-1 {
+      max-width: 500px;
+      font-size: 24px;
+      margin-bottom: 300px;
+      margin-left: 138px;
+    }
+    
+    .paragraph-2 {
+      max-width: px;
+      font-size: 24px;
+      margin-left: 858px;
+      margin-top: 150px;
+      margin-right: 148px;
+    }
+    
+    .image1 {
+      transform: scale(3.5);
+      margin-left: 992px;
+      margin-top: -500px;
+    }
+
+    .image-2 {
+      transform: scale(3.5);
+      margin-left: 370px;
+      margin-top: -175px;
+    }
+    
+    
+    .footer {
+      padding: 10px;
+    }
+
+    .activities {
+      margin-top: 220px;
+      margin-left: 138px;
+    }
+
+    .activities h2 {
+      font-size : 64px;
+      line-height: 60px;
+    }
+
+    .card-container {
+
+      height: 500px;
+      display: flex; /* Use flexbox for better alignment */
+      flex-wrap: wrap; /* Allow wrapping of cards on smaller screens */
+      justify-content: flex-start; /* Align items to the left */
+    
+    }
+    
+    .card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      margin-top: 20px;
+      margin-left: 208px;
+    }
+    
+    .card-image {
+      height: 400px;
+      width: 325px;
+      border-radius: 10px;
+
+    }
+    
+    .card-content h2 {
+      font-size: 36px;
+      line-height: 30px;
+      margin-top: -260px;
+    }
+    
+
+    
+    .card-content button {
+      width: 190px;
+      height: 27px;
+      margin-left: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .carousel {
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .carousel-inner {
+      display: flex;
+      gap: 80px;
+      width: 100%;
+    }
+  
+    .sustainability-tips {
+      margin-left: 238px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px; /* Space between grid items */
+  }
+  
+
+  
+  .sustainability h2 {
+    margin-left: 138px;
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 60px;
+  }
+
+  .sustainability h2 .highlight{
+    font-size:60px;
+    color:#F2FF58;
+  }
+
+  .sustainability-tips li {
+    width: 250px;
+      font-size: 24px; /* Adjust text size */
+      line-height: 1.5; /* Improve readability with better spacing */
+  }
+
+  .tip-icon {
+    display: block; /* Block to center within the list item */
+    width: 70px; /* Size of icons */
+    height: 70px;
+    color:#F2FF58;
+    margin: 0 auto 10px; /* Center the icon and add space below */
+}
+
+
+  }    

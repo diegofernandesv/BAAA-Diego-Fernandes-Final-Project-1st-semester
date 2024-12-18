@@ -1,0 +1,48 @@
+@import url(styles.css);
+
+
+h1 {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #F2FF58;
+}
+
+img {
+    display: inline-block; /* Ensures the image behaves like text for centering */
+    margin-left: 150px ;   /* Makes the image responsive */
+    height: auto; 
+    width: 88px;  
+}
+
+p {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+@media (min-width: 1025px) {
+
+    h1 {
+        font-size: 64px; 
+        line-height: 62px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    img {
+        margin-left: 706px;
+        width: 144px;
+    }
+    p {
+        text-align: center;
+        font-size: 20px;
+    }
+}

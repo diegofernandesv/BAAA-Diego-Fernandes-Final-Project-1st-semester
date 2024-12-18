@@ -1,0 +1,289 @@
+@import url(styles.css);
+
+.trails-info h2 {
+    font-size: 22px;
+    font-weight:500;
+    margin-left: 16px;
+}
+.trails-info h1 {
+    font-size: 22px;
+    font-weight:500;
+    margin-left: 16px;
+}
+
+.trails-info h1 .highlight {
+    color: #F2FF58;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+
+.trail {
+    position: relative; /* This is key for absolute positioning of children */
+    display: flex;
+    flex-direction: column;
+    color: white; /* White text for contrast */
+    overflow: hidden; /* Ensures nothing overflows the rounded corners */
+}
+
+.trail img {
+    position: absolute; /* Positions the image as the background */
+    width: 359px;
+    height: 103px;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    z-index: 0; /* Places the image behind the text */
+    margin-left: 16px;
+    border-radius: 7px;
+}
+
+.trail-content {
+    position: relative; /* Ensures this container respects the absolute positioning of its children */
+    z-index: 1; /* Places content above the image */
+    margin-top: 20px; /* Adds margin from top for the image to show through */
+    margin-left: 26px;
+    max-width: 339px;
+
+}
+
+.trail h2 {
+    color:#F2FF58; /* Yellow title */
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: -14px;
+}
+
+.trail p {
+    margin-top: -24px;
+    margin-left: 14px;
+    width: 173px;
+    font-size: 8px;
+}
+
+.trail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Add spacing between items */
+    margin-left: 250px;
+    margin-top: -80px;
+}
+
+.trail-info div {
+
+    display: flex;
+    gap: 8px; /* Spacing between the icon and text */
+}
+
+.trail-info span {
+    font-size: 8px; /* Adjust font size as needed */
+}
+
+.trail-info img {
+    margin-top: 2px;
+    margin-left: -10px;
+    width: 8px; /* Adjust icon size */
+    height: 8px;
+}
+
+.btn {
+    background: white; /* White button */
+    color: #022425; /* Dark green text on button */
+    font-size: 8px;
+    text-align: center;
+    border-radius: 5px; 
+    padding: 0.5em 4em;
+    margin-left: 234px;
+    text-decoration: none; /* Removes underline from link */
+    margin-top: 10px; /* Space above the button */
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Hover effect for button */
+.btn:hover {
+    background: #022425;/* Yellow on hover */
+    color:#F2FF58; /* Keeps text dark green */
+}
+
+.safety-tips {
+    margin-top: 10px;
+    background-color: #365549;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.safety-tips h2 {
+    font-size: 22px;
+    font-weight:500;
+    margin-left: 16px;
+    color:#F2FF58;
+}
+
+.btn-highlight {
+    font-size: 12px;
+    background: #F2FF58;
+    color:#022425;
+    text-decoration: none; 
+    padding: 4px 20px;
+    border-radius: 5px;
+    margin-left: 128px;
+}
+
+.btn-highlight:hover {
+    background: #022425;
+    color:#F2FF58; 
+}
+
+
+.explore h2 {
+    margin-left: 108px;
+    font-size: 22px;
+    font-weight:500;
+    justify-content: center;
+    color:white;
+}
+
+.explore {
+    position: relative;
+}
+
+.explore img {
+    border-radius: 20px;
+    z-index: -1000;
+    width: 356px;
+    height: 140px;
+    margin-left: 16px;
+}
+
+.btn-explore {
+    font-size: 12px;
+    background: #ffffff;
+    color: #022425;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.btn-explore:hover {
+    background: #022425;
+    color:#F2FF58; 
+}
+/* ----------------------------------------------------- */
+
+
+@media (min-width: 1025px) {
+
+    .trails-info h1 {
+        font-size: 64px;
+        margin-left: 158px;
+    }
+
+    .trails-info h1 .highlight {
+        font-size: 64px;
+    }
+
+    .trail img {
+        width: 1200px;
+        height: 484px;
+        border-radius: 20px;
+        margin-left: 138px;
+    }
+
+    .trail-info{
+        position:relative;
+    }
+
+    .trail-info img {
+        display: none;
+    }
+
+
+    .trail-content {
+        margin-left: 138px;
+    }
+
+    .trails-info h2 {
+        margin-top: 30px;
+        font-size: 64px;
+        width: 700px;
+        margin-left: 72px;
+    }
+
+    .trail p{
+        font-size: 24px;
+        width: 500px;
+        margin-left: 72px;
+        margin-top: -50px;
+        margin-bottom: 100px;
+    }
+
+    .trail-info {
+        gap: 10px;
+    }
+
+    .trail-info span {
+        font-size: 20px;
+        position:relative;
+        margin-left: 550px;
+        top: -300px;
+    }
+    .trail-content{
+        max-width: 1200px;
+    }
+
+    .trail-info div {
+        gap:10px;
+    }
+
+    .btn {
+        padding:0.5em 5em; ;
+        border-radius: 7px;
+        font-size: 20px;
+        margin-left: 800px;
+        position: relative;
+        top: -200px;
+    }
+
+    .safety-tips h2 {
+        font-size: 64px;
+        margin-left: 248px;
+    }
+
+
+    .btn-highlight {
+        font-size: 20px;
+        background: #F2FF58;
+        color:#022425;
+        text-decoration: none; 
+        padding: 12px 40px;
+        border-radius: 5px;
+        margin-left: 650px;
+        margin-top: -20px;
+    }
+
+    .explore h2 {
+        font-size: 64px;
+        margin-left: 496px;
+    }
+
+    .btn-explore {
+        margin-top: -20px;
+        font-size: 20px;
+    }
+
+    .explore img {
+        width:1004px;
+        margin-left:238px;
+        height: 306px;
+    }
+    
+
+
+    
+
+}
