@@ -67,9 +67,11 @@
 
 /* Styling for h2 elements inside .safety */
 .safety h2 {
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 20px;
     color: #F2FF58;
+    font-weight: 500;
+    text-align: center;
 }
 
 /* Styling for the safety button */
@@ -170,5 +172,9 @@
     .safety-button:hover {
         color: #F2FF58;
         background-color: #365549;
+    }
+
+    .safety h2{
+        text-align: center;
     }
 }
