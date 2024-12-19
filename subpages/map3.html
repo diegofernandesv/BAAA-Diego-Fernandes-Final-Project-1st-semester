@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata for the page -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map lagunazo</title>
-  <link rel="stylesheet" href="../css/map.css">
+  <link rel="stylesheet" href="../css/map.css"> <!-- Link to external CSS file -->
 </head>
 <body>
+
+    <!-- Header section with navigation and logo -->
     <header class="navigation-container">
-        <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
+        <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a> <!-- Logo link -->
         <nav class="navigation">
-            <div class="burger-menu" id="burger-menu">
+            <div class="burger-menu" id="burger-menu"> <!-- Burger menu for mobile devices -->
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links" id="nav-links"> <!-- Navigation links -->
                 <li><a href="../index.html" class="link">Home</a></li>
                 <li><a href="explore.html" class="link">Explore</a></li>
                 <li><a href="map.html" class="active-link">Map</a></li>
                 <li><a href="safetytips.html" class="link">Safety Tips</a></li>
             </ul>
             <div class="extra">
-            <ul class="time" id="time">
-                <li id="current-time"></li>
-            </ul>
-            <ul class="temperature" id="temperature">
-                <li id="current-temperature">Loading...</li>
-            </ul>
-        </div>
+                <ul class="time" id="time"> <!-- Current time -->
+                    <li id="current-time"></li>
+                </ul>
+                <ul class="temperature" id="temperature"> <!-- Current temperature -->
+                    <li id="current-temperature">Loading...</li>
+                </ul>
+            </div>
         </nav>
     </header>
+
+    <!-- Main content section -->
     <section>
         <div class="map-container">
             <h2>Find Your Path to El Ávila's Secrets</h2>
-        <div class="navbar-map">
-            <a href="map2.html" class="link">Quebrada Quintero</a>
-            <a href="map.html" class="active-link" >Lagunazo</a>
-            <a href="map4.html" class="link" >Old Cable Car</a>
+            <!-- Navigation for different maps -->
+            <div class="navbar-map">
+                <a href="map2.html" class="link">Quebrada Quintero</a>
+                <a href="map.html" class="active-link">Lagunazo</a>
+                <a href="map4.html" class="link">Old Cable Car</a>
+            </div>
+            <!-- Image of the map -->
+            <img src="../images/montana2lagunazo.png" alt="Map of El Ávila's Lagunazo" style="width: 100%;">
         </div>
-        <img src="../images/montana2lagunazo.png" alt="Map of El Ávila's Lagunazo" style="width: 100%;">
-            
-          </div>
-          <div class="download">
-          <h2>Download our Offline Map</h2>
-          <div>
-            <a class="download-button" href="..images/mapoffline.png" download="El_Avila_Offline_Map.png">
-              Download
-            </a>
-          </div>
-          </div>
-          <div class="safety">
-            <h2>Not sure what to wear for your hike?</h2>
-            <div class="safety-container">
-              <a class="safety-button" href="safetytips.html">
-                View Safety Tips
-              </a>
+
+        <!-- Section to download the offline map -->
+        <div class="download">
+            <h2>Download our Offline Map</h2>
+            <div>
+                <a class="download-button" href="..images/mapoffline.png" download="El_Avila_Offline_Map.png">
+                    Download
+                </a>
             </div>
         </div>
 
-
+        <!-- Safety tips section -->
+        <div class="safety">
+            <h2>Not sure what to wear for your hike?</h2>
+            <div class="safety-container">
+                <a class="safety-button" href="safetytips.html">
+                    View Safety Tips
+                </a>
+            </div>
+        </div>
     </section>
 
-
-
-
+    <!-- Footer section -->
     <footer class="footer">
-        <p>© 2024 Visit Caracas | Follow us: 
-          <a href="#">Instagram</a> | <a href="#">Facebook</a>
-        </p>
-      </footer>
-      <script src="../js/scripts.js"></script>
-      <script src="../js/time.js"></script>
-      <script src="../js/temperature.js"></script>
-      <script src="../js/carousel.js"></script>
-    </body>
-    </html>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Visit Caracas Logo"> <!-- Footer logo -->
+            </div>
+            <div class="social-media">
+                <!-- Social media icons -->
+                <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our TikTok">
+                    <img src="../images/tiktok.png" alt="TikTok Icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram">
+                    <img src="../images/instagram.png" alt="Instagram Icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook">
+                    <img src="../images/facebook.png" alt="Facebook Icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Visit our X (Twitter)">
+                    <img src="../images/x.png" alt="Twitter Icon">
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <!-- Footer navigation links -->
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="map.html">Map</a></li>
+                    <li><a href="safetytips.html">Safety Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- External JavaScript files -->
+    <script src="../js/scripts.js"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/temperature.js"></script>
+    <script src="../js/carousel.js"></script>
+</body>
+</html>

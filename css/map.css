@@ -1,23 +1,23 @@
+/* Import external styles */
 @import url('styles.css');
 
+/* Styling for h2 elements inside .map-container */
 .map-container h2 {
     font-weight: 500;
     font-size: 24px;
-    color:#F2FF58;
+    color: #F2FF58;
     margin-left: 16px;
-
 }
 
-
+/* Styling for h2 elements inside .download */
 .download h2 {
     text-align: center;
     font-weight: 500;
     font-size: 24px;
-
 }
 
+/* Styling for the download button */
 .download-button {
-
     padding: 0.5em 4em;
     border-radius: 13px;
     background-color: #F2FF58;
@@ -27,6 +27,7 @@
     margin-left: 102px;
 }
 
+/* Navbar styling for .navbar-map (flex container) */
 .navbar-map {
     display: flex;
     gap: 10px;
@@ -34,6 +35,7 @@
     margin-left: 16px;
 }
 
+/* Styling for links inside .navbar-map */
 .navbar-map .link {
     font-weight: 500;
     padding-top: 10px;
@@ -47,9 +49,10 @@
     background-position: center;
     width: 150px;
     height: 50px;
-    background-size: cover; /* Ensure the image fits the button */
+    background-size: cover;
 }
 
+/* Styling for active links in .navbar-map */
 .navbar-map .active-link {
     font-weight: 500;
     padding-top: 10px;
@@ -60,15 +63,16 @@
     text-decoration: none;
     text-align: center;
     border: aliceblue;
-
 }
 
+/* Styling for h2 elements inside .safety */
 .safety h2 {
     margin-top: 80px;
     font-size: 20px;
-    color:#F2FF58;
+    color: #F2FF58;
 }
 
+/* Styling for the safety button */
 .safety-button {
     padding: 0.5em 4em;
     border-radius: 13px;
@@ -81,6 +85,7 @@
     margin-bottom: 100px;
 }
 
+/* Navbar link background images */
 .navbar-map .link:nth-child(1) {
     background-image: url('../images/buttonQQ.png');
 }
@@ -93,6 +98,7 @@
     background-image: url('../images/buttonOC.png');
 }
 
+/* Active link background images */
 .navbar-map .active-link:nth-child(1) {
     background-image: url('../images/buttonQQ.png'); 
 }
@@ -105,25 +111,31 @@
     background-image: url('../images/buttonOC.png');
 }
 
-
+/* Media query for screens larger than 1025px */
 @media (min-width: 1025px) {
 
+    /* Adjust navbar map layout for larger screens */
     .navbar-map {
         gap: 18px;
         margin-left: 138px;
     }
+
+    /* Adjust map container h2 size and alignment for larger screens */
     .map-container h2 {
         font-size: 64px;
         text-align: center;
     }
 
+    /* Adjust navbar link size and spacing for larger screens */
     .navbar-map .link {
         width: 382px;
         height: 124px;
         font-size: 32px;
         margin-top: 20px;
-        gap:32px;
+        gap: 32px;
     }
+
+    /* Adjust active navbar link size for larger screens */
     .navbar-map .active-link {
         width: 382px;
         height: 124px;
@@ -131,25 +143,32 @@
         margin-top: 20px;
     }
 
+    /* Adjust download button size for larger screens */
     .download-button {
         font-size: 20px;
         margin-left: 648px;
     }
 
+    /* Hover effect for the download button */
     .download-button:hover {
-        color:#F2FF58;
+        color: #F2FF58;
         background-color: #365549;
     }
 
+    /* Adjust download h2 size for larger screens */
     .download h2 {
-        font-size:64px ;
+        font-size: 64px;
     }
+
+    /* Adjust safety button size for larger screens */
     .safety-button {
         font-size: 20px;
         margin-left: 620px;
     }
+
+    /* Hover effect for the safety button */
     .safety-button:hover {
-        color:#F2FF58;
+        color: #F2FF58;
         background-color: #365549;
     }
 }

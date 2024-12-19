@@ -1,48 +1,58 @@
 @import url(styles.css);
 
 
+/* General styles for all headings h1 */
 h1 {
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
+    font-weight: 500; /* Sets the font weight to medium */
+    font-size: 24px;  /* Sets the font size to 24px */
+    text-align: center; /* Centers the text */
 }
 
+/* General styles for all headings h2 */
 h2 {
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
-    color: #F2FF58;
+    font-weight: 500; /* Sets the font weight to medium */
+    font-size: 24px;  /* Sets the font size to 24px */
+    text-align: center; /* Centers the text */
+    color: #F2FF58; /* Changes the font color to a shade of yellow */
 }
 
+/* Styles for images */
 img {
-    display: inline-block; /* Ensures the image behaves like text for centering */
-    margin-left: 150px ;   /* Makes the image responsive */
-    height: auto; 
-    width: 88px;  
+    display: inline-block; /* Makes the image behave like text for centering */
+    margin-left: 150px; /* Adds space to the left of the image */
+    height: auto; /* Maintains the aspect ratio of the image */
+    width: 88px; /* Sets the width of the image to 88px */
 }
 
+/* General styling for paragraphs */
 p {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 16px; /* Adds space to the left of the paragraph */
+    margin-right: 16px; /* Adds space to the right of the paragraph */
 }
 
+/* Media query for screen sizes 1025px and above (larger screens) */
 @media (min-width: 1025px) {
 
+    /* Styles for h1 on larger screens */
     h1 {
-        font-size: 64px; 
-        line-height: 62px;
+        font-size: 64px; /* Increases the font size to 64px */
+        line-height: 62px; /* Adjusts the line height to 62px */
     }
 
+    /* Styles for h2 on larger screens */
     h2 {
-        font-size: 48px;
+        font-size: 48px; /* Increases the font size to 48px */
     }
 
+    /* Styles for images on larger screens */
     img {
-        margin-left: 706px;
-        width: 144px;
+        margin-left: 706px; /* Adds more space to the left for larger screens */
+        width: 144px; /* Increases the width of the image to 144px */
     }
+
+    /* Styles for paragraphs on larger screens */
     p {
-        text-align: center;
-        font-size: 20px;
+        text-align: center; /* Centers the paragraph text */
+        font-size: 20px; /* Increases the font size to 20px */
     }
 }

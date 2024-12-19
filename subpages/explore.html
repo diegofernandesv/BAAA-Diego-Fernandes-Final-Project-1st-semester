@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags and title for the page -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore the majestic Avila</title>
   <link rel="stylesheet" href="../css/explore.css">
 </head>
 <body>
+    <!-- Header section with logo and navigation menu -->
     <header class="navigation-container">
         <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
         <nav class="navigation">
+            <!-- Burger menu for mobile view -->
             <div class="burger-menu" id="burger-menu">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            <!-- Navigation links -->
             <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html" class="link">Home</a></li>
                 <li><a href="explore.html" class="active-link">Explore</a></li>
                 <li><a href="map.html" class="link">Map</a></li>
                 <li><a href="safetytips.html" class="link">Safety Tips</a></li>
             </ul>
+            <!-- Extra section for time and temperature display -->
             <div class="extra">
             <ul class="time" id="time">
                 <li id="current-time"></li>
@@ -33,13 +38,16 @@
     </header>
 
     <main>
+        <!-- Section for exploring trails -->
         <section class="trails-info">
             <h1>Explore the Majestic Trails of <span class="highlight">El Ávila</span></h1>
+            <!-- Each trail section with image and description -->
             <div class="trail">
                 <img src="../images/image45.png" alt="Quebrada Quintero Long">
                 <div class="trail-content">
                     <h2>Quebrada Quintero</h2>
                     <p>A serene waterfall in El Ávila National Park, offering a peaceful escape surrounded by lush greenery. With its crystal-clear waters and scenic trails, it's a perfect spot for relaxation and nature lovers.</p>
+                    <!-- Trail info: difficulty, time, and distance -->
                     <div class="trail-info">
                         <span>Level of difficulty: Medium</span>
                         <div>
@@ -60,6 +68,7 @@
                 <div class="trail-content">
                     <h2>Lagunazo</h2>
                     <p>A camping area at the start of the Fila Maestra, behind the Humboldt Hotel. Known for its beautiful views, this beloved spot has become a legend, though no road access remains today.</p>
+                    <!-- Trail info: difficulty, time, and distance -->
                     <div class="trail-info">
                         <span>Level of difficulty: Hard</span>
                         <div>
@@ -80,6 +89,7 @@
                 <div class="trail-content">
                     <h2>Old Cable Car</h2>
                     <p>A historic site with abandoned stations and scenic views. Though inactive since 1977, the remnants of this iconic cable car system offer a glimpse into the past and a unique, nostalgic experience for visitors.</p>
+                    <!-- Trail info: difficulty, time, and distance -->
                     <div class="trail-info">
                         <span>Level of difficulty: Easy</span>
                         <div>
@@ -96,11 +106,13 @@
             </div>
         </section>
 
+        <!-- Section for safety tips link -->
         <section class="safety-tips">
             <h2>Not sure what to wear for your hike?</h2>
             <a href="safetytips.html" class="btn-highlight">View Safety Tips</a>
         </section>
 
+        <!-- Section for exploring the map -->
         <section class="explore">
             <h2>Ready to explore?</h2>
             <img src="../images/image48.png" alt="Distance icon">
@@ -108,15 +120,41 @@
         </section>
     </main>
 
+    <!-- Footer section with social media links and navigation -->
     <footer class="footer">
-        <p>© 2024 Visit Caracas | Follow us: 
-          <a href="#">Instagram</a> | <a href="#">Facebook</a>
-        </p>
+        <div class="footer-container">
+          <div class="logo">
+            <img src="../images/logo.svg" alt="Visit Caracas Logo">
+          </div>
+          <div class="social-media">
+            <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our TikTok">
+              <img src="../images/tiktok.png" alt="TikTok Icon" >
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram">
+              <img src="../images/instagram.png" alt="Instagram Icon" >
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook">
+              <img src="../images/facebook.png" alt="Facebook Icon" >
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Visit our X (Twitter)">
+              <img src="../images/x.png" alt="Twitter Icon" >
+            </a>
+          </div>
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="safetytips.html">Safety Tips</a></li>
+            </ul>
+          </nav>
+        </div>
       </footer>
+
+      <!-- External JS files -->
       <script src="../js/scripts.js"></script>
       <script src="../js/time.js"></script>
       <script src="../js/temperature.js"></script>
-
 
 </body>
 </html>

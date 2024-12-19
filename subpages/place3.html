@@ -4,169 +4,213 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Old Cable Car</title>
+  <!-- Link to external CSS file for styling -->
   <link rel="stylesheet" href="../css/place.css">
 </head>
 <body>
+    <!-- Header with navigation menu -->
     <header class="navigation-container">
+        <!-- Logo link to home page -->
         <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
         <nav class="navigation">
+            <!-- Burger menu for mobile navigation -->
             <div class="burger-menu" id="burger-menu">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="nav-links" id="nav-links">
+                <!-- Navigation links -->
                 <li><a href="../index.html" class="link">Home</a></li>
                 <li><a href="explore.html" class="active-link">Explore</a></li>
                 <li><a href="map.html" class="link">Map</a></li>
                 <li><a href="safetytips.html" class="link">Safety Tips</a></li>
             </ul>
             <div class="extra">
-            <ul class="time" id="time">
-                <li id="current-time"></li>
-            </ul>
-            <ul class="temperature" id="temperature">
-                <li id="current-temperature">Loading...</li>
-            </ul>
-        </div>
+                <!-- Display current time -->
+                <ul class="time" id="time">
+                    <li id="current-time"></li>
+                </ul>
+                <!-- Display current temperature -->
+                <ul class="temperature" id="temperature">
+                    <li id="current-temperature">Loading...</li>
+                </ul>
+            </div>
         </nav>
     </header>
 
 <main>
+    <!-- Button to go back to the previous page -->
     <div class="go-back">
         <button onclick="history.back()">Go Back</button>
     </div>
 
-
+    <!-- Section with introductory text about the Old Cable Car -->
     <section class="upper-text">
-    <div class="container">
-        <h2>Old Cable Car</h2>
-        <p>El Lirón is a historic substation nestled in the heart of Ávila National Park, once part of the iconic Teleférico del Ávila system that connected Caracas with the coastal region. Inaugurated in 1956 during the government of General Marcos Pérez Jiménez, the station played a crucial role in managing the movement of cable car cabins as they traveled between the Ávila peaks and the Litoral. Today, while the cable car system has been inactive for decades, El Lirón remains a symbol of the region’s rich history, offering visitors a glimpse into the past and the stunning vistas of the Caracas coastline.</p>
-    </div>
+        <div class="container">
+            <h2>Old Cable Car</h2>
+            <p>El Lirón is a historic substation nestled in the heart of Ávila National Park, once part of the iconic Teleférico del Ávila system...</p>
+        </div>
     </section>
 
+    <!-- Gallery section showing images of the Old Cable Car -->
     <div class="gallery">
         <div class="minimap">
+            <!-- Mini preview container for images -->
             <div class="preview"></div>
         </div>
         <div class="images">
+            <!-- Each image in the gallery -->
             <div class="img">
-                <img src="/images/imge1.png" alt="Old cable car 1">
+                <img src="../images/imge1.png" alt="Old cable car 1">
             </div>
             <div class="img">
-                <img src="/images/imge2.png" alt="Old cable car 2">
+                <img src="../images/imge2.png" alt="Old cable car 2">
             </div>
             <div class="img">
-                <img src="/images/imge3.png" alt="Old cable car 3">
+                <img src="../images/imge3.png" alt="Old cable car 3">
             </div>
             <div class="img">
-                <img src="/images/imge4.png" alt="Old cable car 4">
+                <img src="../images/imge4.png" alt="Old cable car 4">
             </div>
             <div class="img">
-                <img src="/images/imge5.png" alt="Old cable car 5">
+                <img src="../images/imge5.png" alt="Old cable car 5">
             </div>
             <div class="img">
-                <img src="/images/imge6.png" alt="Old cable car 6">
+                <img src="../images/imge6.png" alt="Old cable car 6">
             </div>
             <div class="img">
-                <img src="/images/imge7.png" alt="Old cable car 7">
+                <img src="../images/imge7.png" alt="Old cable car 7">
             </div>
             <div class="img">
-                <img src="/images/imge8.png" alt="Old cable car 8">
+                <img src="../images/imge8.png" alt="Old cable car 8">
             </div>
         </div>
     </div>
 
+    <!-- Section with more historical context about the Old Cable Car -->
     <div class="container">
         <h2>History</h2>
-        <p>According to legend, which is confirmed by some residents of Galipán, the site is known as the "ghost cable car" because those who have dared to visit at night have witnessed paranormal events. The most common occurrence is seeing the cabins moving along the cables, despite the fact that the cables are now completely deteriorated. In 2003, one of the cabins even became stuck in the middle of its route, and it has remained there ever since. Whether this is true or just a legend, what is undeniable is the mysterious energy felt at the site.</p>
-        <p class="p1">Many who have ventured to the site describe an eerie atmosphere, where time seems to stand still. The air is thick with a sense of history, and the old, rusting infrastructure evokes a haunting image of what once was. Some visitors claim to hear faint sounds of the cable cars operating in the distance, or the creaking of old metal as if the system were still running, despite the silence. The decaying cabins, with their weathered exteriors, add to the mystique, as they remain stuck in place, frozen in time. Whether it’s the remnants of a once-thriving transport system or the whispers of something supernatural, El Lirón continues to captivate the imagination, leaving those who visit with an unshakable sense of wonder and intrigue.</p>
-
-    
+        <p>According to legend, which is confirmed by some residents of Galipán, the site is known as the "ghost cable car"...</p>
+        <p class="p1">Many who have ventured to the site describe an eerie atmosphere, where time seems to stand still...</p>
     </div>
 </main>
-    <footer class="footer">
-        <p>© 2024 Visit Caracas | Follow us: 
-          <a href="#">Instagram</a> | <a href="#">Facebook</a>
-        </p>
-      </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const numberOfImages = 8;
-    const minimap = document.querySelector(".minimap .preview");
-    const fullSizeContainer = document.querySelector(".images");
+<!-- Footer section with social media links and navigation -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="logo">
+            <!-- Footer logo -->
+            <img src="../images/logo.svg" alt="Visit Caracas Logo">
+        </div>
+        <div class="social-media">
+            <!-- Social media links -->
+            <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our TikTok">
+                <img src="../images/tiktok.png" alt="TikTok Icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram">
+                <img src="../images/instagram.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook">
+                <img src="../images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Visit our X (Twitter)">
+                <img src="../images/x.png" alt="Twitter Icon">
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <!-- Footer navigation links -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="safetytips.html">Safety Tips</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
 
-    function getRandomLeft() {
-        const values = [-15, -7.5, 0, 7.5, 15];
-        return values[Math.floor(Math.random() * values.length)] + 'px';
-    }
+<!-- JS for scroll-trigger animations and image management -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const numberOfImages = 8;
+        const minimap = document.querySelector(".minimap .preview");
+        const fullSizeContainer = document.querySelector(".images");
 
-    minimap.innerHTML = '';
-    fullSizeContainer.innerHTML = '';
+        // Function to return random left position for thumbnails and full-size images
+        function getRandomLeft() {
+            const values = [-15, -7.5, 0, 7.5, 15];
+            return values[Math.floor(Math.random() * values.length)] + 'px';
+        }
 
-    let activeThumbnail = null;
+        // Clear content before adding new images
+        minimap.innerHTML = '';
+        fullSizeContainer.innerHTML = '';
 
-    for (let i = 1; i <= numberOfImages; i++) {
-        const randomLeft = getRandomLeft();
-        const imagePath = `../images/imge${i}.png`;
+        let activeThumbnail = null;
 
-        // Create thumbnail element
-        const thumbnailDiv = document.createElement('div');
-        thumbnailDiv.className = 'img-thumbnail';
-        thumbnailDiv.style.left = randomLeft;
-        const imgThumbnail = document.createElement('img');
-        imgThumbnail.src = imagePath;
-        thumbnailDiv.appendChild(imgThumbnail);
-        minimap.appendChild(thumbnailDiv);
+        // Loop to generate image thumbnails and full-size images dynamically
+        for (let i = 1; i <= numberOfImages; i++) {
+            const randomLeft = getRandomLeft();
+            const imagePath = `../images/imge${i}.png`;
 
-        // Create full-size image element
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'img';
-        imgDiv.style.left = randomLeft;
-        const imgFull = document.createElement('img');
-        imgFull.src = imagePath;
-        imgDiv.appendChild(imgFull);
-        fullSizeContainer.appendChild(imgDiv);
+            // Create thumbnail element
+            const thumbnailDiv = document.createElement('div');
+            thumbnailDiv.className = 'img-thumbnail';
+            thumbnailDiv.style.left = randomLeft;
+            const imgThumbnail = document.createElement('img');
+            imgThumbnail.src = imagePath;
+            thumbnailDiv.appendChild(imgThumbnail);
+            minimap.appendChild(thumbnailDiv);
 
-        // Register GSAP ScrollTrigger plugin and attach scroll behavior
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-            trigger: imgDiv,
-            start: "top center",
-            end: "bottom center",
-            onToggle: self => {
-                if (self.isActive) {
-                    if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
-                        animateThumbnail(activeThumbnail, false);
+            // Create full-size image element
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'img';
+            imgDiv.style.left = randomLeft;
+            const imgFull = document.createElement('img');
+            imgFull.src = imagePath;
+            imgDiv.appendChild(imgFull);
+            fullSizeContainer.appendChild(imgDiv);
+
+            // GSAP ScrollTrigger plugin to animate images on scroll
+            gsap.registerPlugin(ScrollTrigger);
+            ScrollTrigger.create({
+                trigger: imgDiv,
+                start: "top center",
+                end: "bottom center",
+                onToggle: self => {
+                    if (self.isActive) {
+                        if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
+                            animateThumbnail(activeThumbnail, false);
+                        }
+
+                        animateThumbnail(thumbnailDiv, true);
+                        activeThumbnail = thumbnailDiv;
+                    } else if (activeThumbnail === thumbnailDiv) {
+                        animateThumbnail(thumbnailDiv, false);
                     }
-
-                    animateThumbnail(thumbnailDiv, true);
-                    activeThumbnail = thumbnailDiv;
-                } else if (activeThumbnail === thumbnailDiv) {
-                    animateThumbnail(thumbnailDiv, false);
                 }
-            }
-        });
-    }
+            });
+        }
 
-    function animateThumbnail(thumbnail, isActive) {
-        gsap.to(thumbnail, {
-            border: isActive ? '1px solid #F2FF58' : 'none',
-            opacity: isActive ? 1 : 0.5,
-            scale: isActive ? 1.1 : 1,
-            zIndex: isActive ? 10000 : 1,
-            duration: 0.3
-        });
-    }
-});
-    </script>
-  <script src="/js/scripts.js"></script>
-  <script src="/js/time.js"></script>
-  <script src="/js/temperature.js"></script>
+        // Function to animate thumbnail when active or inactive
+        function animateThumbnail(thumbnail, isActive) {
+            gsap.to(thumbnail, {
+                border: isActive ? '1px solid #F2FF58' : 'none',
+                opacity: isActive ? 1 : 0.5,
+                scale: isActive ? 1.1 : 1,
+                zIndex: isActive ? 10000 : 1,
+                duration: 0.3
+            });
+        }
+    });
+</script>
+<!-- External JS files for time and temperature -->
+<script src="../js/scripts.js"></script>
+<script src="../js/time.js"></script>
+<script src="../js/temperature.js"></script>
 
 </body>
 </html>

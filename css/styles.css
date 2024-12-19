@@ -450,17 +450,68 @@ body {
 }
   
   
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color:#022425;
-  }
-  
-  .footer a {
-    color: #F2FF58;
-    text-decoration: none;
-  }
-  
+.footer {
+  background-color: #022728; /* Dark background */
+  color: #fff; /* White text color */
+  padding: 20px;
+  text-align: center; /* Center content for mobile */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  gap: 30px; /* Space between sections */
+}
+
+/* Logo Section */
+.logo img {
+  margin-left: -20px;
+  width: 120px; /* Smaller logo size for mobile */
+  height: auto; /* Maintain proportions */
+}
+
+/* Social Media Section */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+}
+
+.social-media a {
+  display: inline-block;
+  width: 30px; /* Icon container size */
+  height: 30px;
+  overflow: hidden; /* Clip images to circle */
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.social-media a img {
+  width: 100%; /* Make the image fit the container */
+  height: 100%;
+  object-fit: cover; /* Maintain image proportions */
+}
+
+/* Navigation Section */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 10px; /* Space between links */
+}
+
+.footer-nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text color */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #F2FF58; /* Highlight link on hover */
+}
   
   /* For Desktop */
   @media (min-width: 1025px) {
@@ -720,3 +771,48 @@ body {
 
 
   }    
+
+  /* Tablet and Larger Screens */
+@media screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Space out elements */
+    text-align: left;
+  }
+
+  .social-media {
+    justify-content: flex-start; /* Align icons to the left */
+  }
+
+  .footer-nav ul {
+    flex-direction: row; /* Display links horizontally */
+    gap: 20px; /* Add more space between links */
+  }
+}
+
+/* Desktop Screens */
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 30px 0; /* Add more padding for larger screens */
+    
+  }
+
+  .footer-container {
+    margin-right: 160px;
+  }
+
+  .logo img {
+    width: 150px; /* Larger logo size for desktop */
+  }
+
+  .social-media a {
+    width: 40px; /* Slightly larger icons */
+    height: 40px;
+  }
+
+  .footer-nav ul li a {
+    font-size: 18px; /* Increase font size for readability */
+  }
+
+
+}

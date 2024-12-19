@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and viewport settings for responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the page -->
   <title>Quebrada Quintero</title>
+  
+  <!-- Link to external CSS stylesheet for page styling -->
   <link rel="stylesheet" href="../css/place.css">
 </head>
 <body>
+    <!-- Header section with navigation -->
     <header class="navigation-container">
+        <!-- Logo linking back to the homepage -->
         <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
+        
         <nav class="navigation">
+            <!-- Burger menu for mobile navigation -->
             <div class="burger-menu" id="burger-menu">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            
+            <!-- Navigation links -->
             <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html" class="link">Home</a></li>
                 <li><a href="explore.html" class="active-link">Explore</a></li>
                 <li><a href="map.html" class="link">Map</a></li>
                 <li><a href="safetytips.html" class="link">Safety Tips</a></li>
             </ul>
+            
             <div class="extra">
-            <ul class="time" id="time">
-                <li id="current-time"></li>
-            </ul>
-            <ul class="temperature" id="temperature">
-                <li id="current-temperature">Loading...</li>
-            </ul>
-        </div>
+                <!-- Time section -->
+                <ul class="time" id="time">
+                    <li id="current-time"></li>
+                </ul>
+                
+                <!-- Temperature section -->
+                <ul class="temperature" id="temperature">
+                    <li id="current-temperature">Loading...</li>
+                </ul>
+            </div>
         </nav>
     </header>
 
+<!-- Main content area -->
 <main>
+    <!-- Go back button -->
     <div class="go-back">
         <button onclick="history.back()">Go Back</button>
     </div>
 
-
+    <!-- Information section about Quebrada Quintero -->
     <section class="upper-text">
-    <div class="container">
-        <h2>Quebrada Quintero</h2>
-        <p class="p2">Level of dificulty : Medium <br>Duration : 1.5-2 hours<br>Height : 1070 meters </p>
-        <p>Quebrada Quintero is a hidden gem tucked away in the lush landscapes of El Ávila National Park. Known only to a few adventurous explorers, this tranquil waterfall offers an unparalleled escape into nature.Surrounded by dense greenery and accessible via a little-known trail, it feels like stepping into a secret paradise. The crystal-clear waters cascade gently over the rocks, creating a serene atmosphere perfect for those seeking peace and solitude. Its untouched beauty makes it a rare find, ideal for hikers who want to discover a quieter side of El Ávila, away from the crowds.</p>
-
-    </div>
+        <div class="container">
+            <h2>Quebrada Quintero</h2>
+            <!-- Level of difficulty, duration, and height info -->
+            <p class="p2">Level of difficulty : Medium <br>Duration : 1.5-2 hours<br>Height : 1070 meters </p>
+            <!-- Description of the place -->
+            <p>Quebrada Quintero is a hidden gem tucked away in the lush landscapes of El Ávila National Park. Known only to a few adventurous explorers, this tranquil waterfall offers an unparalleled escape into nature. Surrounded by dense greenery and accessible via a little-known trail, it feels like stepping into a secret paradise. The crystal-clear waters cascade gently over the rocks, creating a serene atmosphere perfect for those seeking peace and solitude. Its untouched beauty makes it a rare find, ideal for hikers who want to discover a quieter side of El Ávila, away from the crowds.</p>
+        </div>
     </section>
 
+    <!-- Gallery section for images -->
     <div class="gallery">
         <div class="minimap">
             <div class="preview"></div>
         </div>
+        <!-- Full-size images for the gallery -->
         <div class="images">
             <div class="img">
                 <img src="../images/img1.png" alt="Quebrada quintero 1">
@@ -79,29 +99,59 @@
         </div>
     </div>
 
-<section>
-    <div class="container">
-        <h2>History</h2>
-        <p>Quebrada Quintero has long been part of the rich natural tapestry of El Ávila National Park, quietly flowing through the mountains for centuries. Though its beauty remains relatively unknown to most visitors, it has historically been a vital source of fresh water for nearby communities and wildlife. The name "Quebrada Quintero" likely originated from the local settlers who lived in harmony with the park’s abundant natural resources.</p>
-        <p>Over time, it became a secluded retreat for a small number of nature enthusiasts who valued its tranquility and untouched charm. Unlike more popular destinations in El Ávila, Quebrada Quintero has largely escaped development, retaining its pristine and raw appeal. Its hidden location and the stories told by locals about its serene beauty have helped cement its place as a secret haven in the heart of the park.</p>
-
-    </div>
-</section>
-
+    <!-- History section about Quebrada Quintero -->
+    <section>
+        <div class="container">
+            <h2>History</h2>
+            <!-- Brief history and context of the place -->
+            <p>Quebrada Quintero has long been part of the rich natural tapestry of El Ávila National Park, quietly flowing through the mountains for centuries. Though its beauty remains relatively unknown to most visitors, it has historically been a vital source of fresh water for nearby communities and wildlife. The name "Quebrada Quintero" likely originated from the local settlers who lived in harmony with the park’s abundant natural resources.</p>
+            <p>Over time, it became a secluded retreat for a small number of nature enthusiasts who valued its tranquility and untouched charm. Unlike more popular destinations in El Ávila, Quebrada Quintero has largely escaped development, retaining its pristine and raw appeal. Its hidden location and the stories told by locals about its serene beauty have helped cement its place as a secret haven in the heart of the park.</p>
+        </div>
+    </section>
 
 </main>
-    <footer class="footer">
-        <p>© 2024 Visit Caracas | Follow us: 
-          <a href="#">Instagram</a> | <a href="#">Facebook</a>
-        </p>
-      </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    <script>
-    // Wait for the DOM content to load before executing the script
-    document.addEventListener("DOMContentLoaded", function () {
+<!-- Footer section with social media links -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo in the footer -->
+        <div class="logo">
+            <img src="../images/logo.svg" alt="Visit Caracas Logo">
+        </div>
+        <!-- Social media icons -->
+        <div class="social-media">
+            <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our TikTok">
+                <img src="../images/tiktok.png" alt="TikTok Icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram">
+                <img src="../images/instagram.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook">
+                <img src="../images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Visit our X (Twitter)">
+                <img src="../images/x.png" alt="Twitter Icon">
+            </a>
+        </div>
+        <!-- Footer navigation links -->
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="safetytips.html">Safety Tips</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<!-- JavaScript includes -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script>
+// Wait for the DOM content to load before executing the script
+document.addEventListener("DOMContentLoaded", function () {
     const numberOfImages = 8; // Number of images to generate
     const minimap = document.querySelector(".minimap .preview"); // The container for thumbnails
     const fullSizeContainer = document.querySelector(".images"); // The container for full-sized images
@@ -174,10 +224,12 @@
         });
     }
 });
-    </script>
-  <script src="../js/scripts.js"></script>
-  <script src="../js/time.js"></script>
-  <script src="../js/temperature.js"></script>
+</script>
+
+<!-- External JavaScript files -->
+<script src="../js/scripts.js"></script>
+<script src="../js/time.js"></script>
+<script src="../js/temperature.js"></script>
 
 </body>
 </html>

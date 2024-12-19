@@ -1,87 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and viewport settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the page -->
   <title>Safety tips</title>
+  
+  <!-- Link to external CSS file for styling the page -->
   <link rel="stylesheet" href="../css/safetytips.css">
 </head>
-    <header class="navigation-container">
-        <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
-        <nav class="navigation">
-            <div class="burger-menu" id="burger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../index.html" class="link">Home</a></li>
-                <li><a href="explore.html" class="link">Explore</a></li>
-                <li><a href="map.html" class="link">Map</a></li>
-                <li><a href="safetytips.html" class="active-link">Safety Tips</a></li>
-            </ul>
-            <div class="extra">
-            <ul class="time" id="time">
-                <li id="current-time"></li>
-            </ul>
-            <ul class="temperature" id="temperature">
-                <li id="current-temperature">Loading...</li>
-            </ul>
-        </div>
-        </nav>
-    </header>
 
-    <section>
-        <h1>Essential Safety Tips <br> for Exploring El Ávila</h1>
+<body>
+  <!-- Navigation header section -->
+  <header class="navigation-container">
+    <!-- Logo linking to the homepage -->
+    <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
+    
+    <nav class="navigation">
+      <!-- Burger menu for mobile view -->
+      <div class="burger-menu" id="burger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      
+      <!-- Navigation links for the main sections of the website -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" class="link">Home</a></li>
+        <li><a href="explore.html" class="link">Explore</a></li>
+        <li><a href="map.html" class="link">Map</a></li>
+        <li><a href="safetytips.html" class="active-link">Safety Tips</a></li>
+      </ul>
+      
+      <div class="extra">
+        <!-- Displaying current time -->
+        <ul class="time" id="time">
+          <li id="current-time"></li>
+        </ul>
+        
+        <!-- Displaying current temperature -->
+        <ul class="temperature" id="temperature">
+          <li id="current-temperature">Loading...</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-        <div>
-            <h2>1. Trail Safety</h2>
-            <img src="../images/icon7.svg" alt="Trail Safety">
-            <p>Stick to marked paths, respect wildlife, and avoid hiking alone. Always inform someone of your plans.</p>
-        </div>
+  <!-- Main section containing the safety tips -->
+  <section>
+    <!-- Main heading for the safety tips page -->
+    <h1>Essential Safety Tips <br> for Exploring El Ávila</h1>
 
-        <div>
-            <h2>2. Weather Awareness</h2>
-            <img src="../images/icon8.svg" alt="Weather Awareness">
-            <p>Check the forecast, dress appropriately, and stay hydrated. Avoid exploring during adverse weather.</p>
-        </div>
+    <!-- Each safety tip section -->
+    <div>
+      <h2>1. Trail Safety</h2>
+      <img src="../images/icon7.svg" alt="Trail Safety">
+      <p>Stick to marked paths, respect wildlife, and avoid hiking alone. Always inform someone of your plans.</p>
+    </div>
 
-        <div>
-            <h2>3. Health Precautions</h2>
-            <img src="../images/icon9.svg" alt="Health Precautions">
-            <p>Know your limits, carry snacks and water, and wear sunscreen. Keep local emergency numbers handy.</p>
-        </div>
+    <div>
+      <h2>2. Weather Awareness</h2>
+      <img src="../images/icon8.svg" alt="Weather Awareness">
+      <p>Check the forecast, dress appropriately, and stay hydrated. Avoid exploring during adverse weather.</p>
+    </div>
 
-        <div>
-            <h2>4. Gear Essentials</h2>
-            <img src="../images/icon10.svg" alt="Gear Essentials">
-            <p>Pack a first aid kit, flashlight, and other necessary gear. Safely secure camera equipment.</p>
-        </div>
+    <div>
+      <h2>3. Health Precautions</h2>
+      <img src="../images/icon9.svg" alt="Health Precautions">
+      <p>Know your limits, carry snacks and water, and wear sunscreen. Keep local emergency numbers handy.</p>
+    </div>
 
-        <div>
-            <h2>5. Tour Etiquette</h2>
-            <img src="../images/icon11.svg" alt="Tour Etiquette">
-            <p>Follow guides’ instructions, know the route, and use helmets when required.</p>
-        </div>
+    <div>
+      <h2>4. Gear Essentials</h2>
+      <img src="../images/icon10.svg" alt="Gear Essentials">
+      <p>Pack a first aid kit, flashlight, and other necessary gear. Safely secure camera equipment.</p>
+    </div>
 
-        <div>
-            <h2>6. Navigation & Communication</h2>
-            <img src="../images/icon12.svg" alt="Navigation & Communication">
-            <p>Bring a map/compass, have an emergency plan, and mark your route if needed.</p>
-        </div>
+    <div>
+      <h2>5. Tour Etiquette</h2>
+      <img src="../images/icon11.svg" alt="Tour Etiquette">
+      <p>Follow guides’ instructions, know the route, and use helmets when required.</p>
+    </div>
 
-        <div>
-            <h2>7. Wildlife Awareness</h2>
-            <img src="../images/icon13.svg" alt="Wildlife Awareness">
-            <p>Keep a safe distance from animals and use insect repellent.</p>
-        </div>
-    </section>
+    <div>
+      <h2>6. Navigation & Communication</h2>
+      <img src="../images/icon12.svg" alt="Navigation & Communication">
+      <p>Bring a map/compass, have an emergency plan, and mark your route if needed.</p>
+    </div>
 
-<footer class="footer">
-    <p>© 2024 Visit Caracas | Follow us: 
-      <a href="#">Instagram</a> | <a href="#">Facebook</a>
-    </p>
+    <div>
+      <h2>7. Wildlife Awareness</h2>
+      <img src="../images/icon13.svg" alt="Wildlife Awareness">
+      <p>Keep a safe distance from animals and use insect repellent.</p>
+    </div>
+  </section>
+
+  <!-- Footer section containing social media links and additional navigation -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="logo">
+        <!-- Logo image for the footer -->
+        <img src="../images/logo.svg" alt="Visit Caracas Logo">
+      </div>
+      
+      <div class="social-media">
+        <!-- Links to various social media platforms -->
+        <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our TikTok">
+          <img src="../images/tiktok.png" alt="TikTok Icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram">
+          <img src="../images/instagram.png" alt="Instagram Icon">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook">
+          <img src="../images/facebook.png" alt="Facebook Icon">
+        </a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Visit our X (Twitter)">
+          <img src="../images/x.png" alt="Twitter Icon">
+        </a>
+      </div>
+
+      <!-- Footer navigation links -->
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="safetytips.html">Safety Tips</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
+
+  <!-- External JavaScript files -->
   <script src="../js/scripts.js"></script>
   <script src="../js/time.js"></script>
   <script src="../js/temperature.js"></script>

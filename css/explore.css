@@ -1,58 +1,68 @@
+/* --------------------------- Importing Styles --------------------------- */
 @import url(styles.css);
 
+/* --------------------------- Header Section --------------------------- */
+/* .trails-info h2 - Styles for h2 element inside .trails-info */
 .trails-info h2 {
     font-size: 22px;
     font-weight:500;
     margin-left: 16px;
 }
+
+/* .trails-info h1 - Styles for h1 element inside .trails-info */
 .trails-info h1 {
     font-size: 22px;
     font-weight:500;
     margin-left: 16px;
 }
 
+/* .trails-info h1 .highlight - Styles for highlighted text inside h1 */
 .trails-info h1 .highlight {
     color: #F2FF58;
     font-style: italic;
     font-size: 22px;
     font-weight: 700;
-  }
-
-
-.trail {
-    position: relative; /* This is key for absolute positioning of children */
-    display: flex;
-    flex-direction: column;
-    color: white; /* White text for contrast */
-    overflow: hidden; /* Ensures nothing overflows the rounded corners */
 }
 
+/* ---------------------------- Trail Section ---------------------------- */
+/* .trail - Container for each trail, positioning and layout */
+.trail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+}
+
+/* .trail img - Styles for images inside .trail, positioning them as background */
 .trail img {
-    position: absolute; /* Positions the image as the background */
+    position: absolute;
     width: 359px;
     height: 103px;
-    object-fit: cover; /* Ensures image covers the area without distortion */
-    z-index: 0; /* Places the image behind the text */
+    object-fit: cover;
+    z-index: 0;
     margin-left: 16px;
     border-radius: 7px;
 }
 
+/* .trail-content - Container for the content inside each trail, placed above the image */
 .trail-content {
-    position: relative; /* Ensures this container respects the absolute positioning of its children */
-    z-index: 1; /* Places content above the image */
-    margin-top: 20px; /* Adds margin from top for the image to show through */
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
     margin-left: 26px;
     max-width: 339px;
-
 }
 
+/* .trail h2 - Styles for h2 inside .trail, color and spacing */
 .trail h2 {
-    color:#F2FF58; /* Yellow title */
+    color:#F2FF58;
     font-size: 24px;
     margin-left: 10px;
     margin-top: -14px;
 }
 
+/* .trail p - Styles for paragraph text inside .trail */
 .trail p {
     margin-top: -24px;
     margin-left: 14px;
@@ -60,51 +70,59 @@
     font-size: 8px;
 }
 
+/* ------------------------- Trail Information Section ------------------------- */
+/* .trail-info - Container for trail information, layout and positioning */
 .trail-info {
     display: flex;
     flex-direction: column;
-    gap: 0px; /* Add spacing between items */
+    gap: 0px;
     margin-left: 250px;
     margin-top: -80px;
 }
 
+/* .trail-info div - Styles for divs inside .trail-info */
 .trail-info div {
-
     display: flex;
-    gap: 8px; /* Spacing between the icon and text */
+    gap: 8px;
 }
 
+/* .trail-info span - Styles for span text inside .trail-info */
 .trail-info span {
-    font-size: 8px; /* Adjust font size as needed */
+    font-size: 8px;
 }
 
+/* .trail-info img - Styles for icons inside .trail-info */
 .trail-info img {
     margin-top: 2px;
     margin-left: -10px;
-    width: 8px; /* Adjust icon size */
+    width: 8px;
     height: 8px;
 }
 
+/* ------------------------------- Button Section ------------------------------- */
+/* .btn - Styles for buttons, including padding and color */
 .btn {
-    background: white; /* White button */
-    color: #022425; /* Dark green text on button */
+    background: white;
+    color: #022425;
     font-size: 8px;
     text-align: center;
-    border-radius: 5px; 
+    border-radius: 5px;
     padding: 0.5em 4em;
     margin-left: 234px;
-    text-decoration: none; /* Removes underline from link */
-    margin-top: 10px; /* Space above the button */
+    text-decoration: none;
+    margin-top: 10px;
     display: inline-block;
     margin-bottom: 30px;
 }
 
-/* Hover effect for button */
+/* .btn:hover - Styles for hover effect on .btn */
 .btn:hover {
-    background: #022425;/* Yellow on hover */
-    color:#F2FF58; /* Keeps text dark green */
+    background: #022425;
+    color:#F2FF58;
 }
 
+/* ---------------------------- Safety Tips Section ---------------------------- */
+/* .safety-tips - Container for safety tips section */
 .safety-tips {
     margin-top: 10px;
     background-color: #365549;
@@ -112,6 +130,7 @@
     padding-top: 10px;
 }
 
+/* .safety-tips h2 - Styles for heading inside safety tips */
 .safety-tips h2 {
     font-size: 22px;
     font-weight:500;
@@ -119,22 +138,19 @@
     color:#F2FF58;
 }
 
+/* ------------------------------ Highlight Button Section ------------------------------ */
+/* .btn-highlight - Styles for highlighted buttons inside safety tips */
 .btn-highlight {
     font-size: 12px;
     background: #F2FF58;
     color:#022425;
-    text-decoration: none; 
+    text-decoration: none;
     padding: 4px 20px;
     border-radius: 5px;
-    margin-left: 128px;
 }
 
-.btn-highlight:hover {
-    background: #022425;
-    color:#F2FF58; 
-}
-
-
+/* ------------------------------ Explore Section ------------------------------ */
+/* .explore h2 - Heading for the explore section */
 .explore h2 {
     margin-left: 108px;
     font-size: 22px;
@@ -143,10 +159,12 @@
     color:white;
 }
 
+/* .explore - Container for explore section */
 .explore {
     position: relative;
 }
 
+/* .explore img - Styles for images inside .explore section */
 .explore img {
     border-radius: 20px;
     z-index: -1000;
@@ -155,6 +173,7 @@
     margin-left: 16px;
 }
 
+/* .btn-explore - Button inside the explore section */
 .btn-explore {
     font-size: 12px;
     background: #ffffff;
@@ -169,24 +188,28 @@
     z-index: 1;
 }
 
+/* .btn-explore:hover - Styles for hover effect on .btn-explore */
 .btn-explore:hover {
     background: #022425;
-    color:#F2FF58; 
+    color:#F2FF58;
 }
-/* ----------------------------------------------------- */
 
+/* --------------------------- Media Query for Larger Screens --------------------------- */
+/* @media (min-width: 1025px) - Styles for screens with width 1025px and above */
 
+/* .trails-info h1 - Increase font size and margin for h1 in larger screens */
 @media (min-width: 1025px) {
-
     .trails-info h1 {
         font-size: 64px;
         margin-left: 158px;
     }
 
+    /* .trails-info h1 .highlight - Increase font size for highlighted text in h1 */
     .trails-info h1 .highlight {
         font-size: 64px;
     }
 
+    /* .trail img - Adjust image size and margin for larger screens */
     .trail img {
         width: 1200px;
         height: 484px;
@@ -194,19 +217,22 @@
         margin-left: 138px;
     }
 
+    /* .trail-info - Adjust position for larger screens */
     .trail-info{
         position:relative;
     }
 
+    /* .trail-info img - Hide the icon image in larger screens */
     .trail-info img {
         display: none;
     }
 
-
+    /* .trail-content - Adjust margin for larger screens */
     .trail-content {
         margin-left: 138px;
     }
 
+    /* .trails-info h2 - Adjust font size and margin for h2 */
     .trails-info h2 {
         margin-top: 30px;
         font-size: 64px;
@@ -214,6 +240,7 @@
         margin-left: 72px;
     }
 
+    /* .trail p - Adjust font size and margins for paragraphs */
     .trail p{
         font-size: 24px;
         width: 500px;
@@ -222,26 +249,32 @@
         margin-bottom: 100px;
     }
 
+    /* .trail-info - Adjust gap between elements in .trail-info */
     .trail-info {
         gap: 10px;
     }
 
+    /* .trail-info span - Adjust font size and position for span text */
     .trail-info span {
         font-size: 20px;
         position:relative;
         margin-left: 550px;
         top: -300px;
     }
+
+    /* .trail-content - Adjust maximum width for larger screens */
     .trail-content{
         max-width: 1200px;
     }
 
+    /* .trail-info div - Adjust gap between divs inside .trail-info */
     .trail-info div {
         gap:10px;
     }
 
+    /* .btn - Increase padding and font size for buttons */
     .btn {
-        padding:0.5em 5em; ;
+        padding:0.5em 5em;
         border-radius: 7px;
         font-size: 20px;
         margin-left: 800px;
@@ -249,41 +282,40 @@
         top: -200px;
     }
 
+    /* .safety-tips h2 - Increase font size and margin for h2 */
     .safety-tips h2 {
         font-size: 64px;
         margin-left: 248px;
     }
 
-
+    /* .btn-highlight - Increase size and adjust margin for highlighted buttons */
     .btn-highlight {
         font-size: 20px;
         background: #F2FF58;
         color:#022425;
-        text-decoration: none; 
+        text-decoration: none;
         padding: 12px 40px;
         border-radius: 5px;
         margin-left: 650px;
         margin-top: -20px;
     }
 
+    /* .explore h2 - Adjust font size and margin for heading */
     .explore h2 {
         font-size: 64px;
         margin-left: 496px;
     }
 
+    /* .btn-explore - Increase font size for explore button */
     .btn-explore {
         margin-top: -20px;
         font-size: 20px;
     }
 
+    /* .explore img - Adjust size and position of explore image */
     .explore img {
         width:1004px;
         margin-left:238px;
         height: 306px;
     }
-    
-
-
-    
-
 }

@@ -1,155 +1,166 @@
+/* Import external styles */
 @import url(styles.css);
 
-
-*{
-    margin:0;
+/* Universal selector to reset margin and apply border-box for all elements */
+* {
+    margin: 0;
     box-sizing: border-box;
 }
 
-
+/* Upper-text class, sets background image for the element */
 .upper-text {
-    background-image: url(images/quebradaquintero.png);
+    background-image: url(images/quebradaquintero.png); /* Background image */
 }
 
+/* Go-back button styles */
 .go-back button {
-    margin-left: 158px;
-    margin-top: 60px;
-    background-color: #F2FF58;
-    color:#022425;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    margin-left: 158px; /* Left margin to position the button */
+    margin-top: 60px;   /* Top margin for spacing */
+    background-color: #F2FF58; /* Yellow background */
+    color: #022425;    /* Text color */
+    padding: 0.5em 1em; /* Padding for button */
+    border: none;      /* Removes border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;   /* Pointer cursor on hover */
+    font-size: 14px;    /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
+/* Hover effect for the go-back button */
 .go-back button:hover {
-    background-color: #365549;
-    color:#F2FF58;
+    background-color: #365549; /* Darker background on hover */
+    color: #F2FF58; /* Yellow text color on hover */
 }
 
-h2{
-    text-align: center;
-    font-weight: 500;
-    font-size: 64px;
-    color:#F2FF58;
-    margin-top: -180px;
+/* Heading styles for h2 */
+h2 {
+    text-align: center; /* Centers the text */
+    font-weight: 500;   /* Medium font weight */
+    font-size: 64px;    /* Font size */
+    color: #F2FF58;     /* Yellow text color */
+    margin-top: -180px; /* Negative top margin to adjust positioning */
 }
 
+/* Paragraph styling for class .p2 */
 .p2 {
-    color:#F2FF58;
-    line-height: 48px;
+    color: #F2FF58;      /* Yellow text color */
+    line-height: 48px;    /* Line height for better readability */
 }
 
+/* Main container styling */
 .container {
-    padding: 10em 2em 5em 2em;
-    width: 100%;
-    height: 100%;
-    background: #022425;
+    padding: 10em 2em 5em 2em; /* Padding for the container */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: #022425; /* Dark background */
 }
 
-
-
+/* Paragraph styling inside .container */
 .container p {
-    margin-top: 20px;
-    text-align: justify;
-    font-size: 24px;
-    margin-left: 138px;
-    width: 1140px;
+    margin-top: 20px; /* Adds margin to the top */
+    text-align: justify; /* Justifies the text */
+    font-size: 24px; /* Font size */
+    margin-left: 138px; /* Left margin */
+    width: 1140px; /* Fixed width */
 }
 
-
+/* Gallery section styling */
 .gallery {
-    position: relative;
-    width: 100%;
-    display: flex;
-    padding: 5em 2em;
-    z-index:-1
+    position: relative; /* Relative positioning */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox layout */
+    padding: 5em 2em; /* Padding for spacing */
+    z-index: -1; /* Sets the z-index for stacking order */
 }
 
-
+/* Minimap positioning and styling */
 .minimap {
-    position:sticky;
-    top:0;
-    width: 20%;
-    height:100vh;
-    padding:1em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    position: sticky; /* Sticky position, stays at the top when scrolling */
+    top: 0; /* Top position */
+    width: 20%; /* Takes up 20% of the width */
+    height: 100vh; /* Full viewport height */
+    padding: 1em 0; /* Vertical padding */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
+/* Images container styles */
 .images {
-    position: relative;
-    top:0;
-    width: 80%;
+    position: relative; /* Relative positioning */
+    top: 0; /* Top position */
+    width: 80%; /* Takes up 80% of the width */
 }
 
+/* Image container for large images */
 .img {
-    position: relative;
-    width: 800px;
-    height: 1000px;
-    border-radius: 40px;
-    overflow: hidden;
-    margin: 50px auto;
+    position: relative; /* Relative positioning */
+    width: 800px; /* Width of the image container */
+    height: 1000px; /* Height of the image container */
+    border-radius: 40px; /* Rounded corners */
+    overflow: hidden; /* Hides any overflow */
+    margin: 50px auto; /* Centers the image container */
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+/* Image styling */
+img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    border-radius: 10px; /* Rounded corners */
 }
 
+/* Image thumbnail styling */
 .img-thumbnail {
-    position: relative;
-    width:50px;
-    height: 70px;
-    opacity: 0.5;;
-
+    position: relative; /* Relative positioning */
+    width: 50px; /* Thumbnail width */
+    height: 70px; /* Thumbnail height */
+    opacity: 0.5; /* Semi-transparent */
 }
 
-
-
-
+/* Media query for devices with a max width of 768px */
 @media only screen and (max-width: 768px) {
 
+    /* Image container for smaller screens */
     .img {
         position: relative;
-        width: 250px;
-        height: 250px;
-        border-radius: 20px;
-        overflow: hidden;
-        margin: 50px auto;
+        width: 250px; /* Reduced width */
+        height: 250px; /* Reduced height */
+        border-radius: 20px; /* Rounded corners */
+        overflow: hidden; /* Hides overflow */
+        margin: 50px auto; /* Centers the image */
     }
 
-    h2{
-        font-size: 36px;
-        margin-top: -100px;
+    /* Heading styling for smaller screens */
+    h2 {
+        font-size: 36px; /* Smaller font size */
+        margin-top: -100px; /* Adjusts the top margin */
     }
 
+    /* Container paragraph styling for smaller screens */
     .container p {
-        margin-right: 16px;
-        width: 300px;
-        margin-left: 16px;
-        margin-top: 20px;
-        font-size: 12px;
+        margin-right: 16px; /* Right margin */
+        width: 300px; /* Reduced width */
+        margin-left: 16px; /* Left margin */
+        margin-top: 20px; /* Top margin */
+        font-size: 12px; /* Smaller font size */
     }
 
+    /* Thumbnail styling for smaller screens */
     .img-thumbnail {
         position: relative;
-        width:30px;
-        height: 50px;
-        opacity: 0.5;;
-    
-    }
-    .go-back button{
-        margin-left: 16px;
+        width: 30px; /* Smaller width */
+        height: 50px; /* Smaller height */
+        opacity: 0.5; /* Semi-transparent */
     }
 
-    .p2{
-        line-height: 12px;
+    /* Go-back button styling for smaller screens */
+    .go-back button {
+        margin-left: 16px; /* Adjusted left margin */
+    }
+
+    /* Paragraph styling for class .p2 on smaller screens */
+    .p2 {
+        line-height: 12px; /* Reduced line height */
     }
 }

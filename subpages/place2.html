@@ -4,40 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lagunazo</title>
+  <!-- Linking external stylesheet for the page -->
   <link rel="stylesheet" href="../css/place.css">
 </head>
 <body>
+    <!-- Header with navigation bar and logo -->
     <header class="navigation-container">
         <a href="../index.html"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
         <nav class="navigation">
+            <!-- Burger menu for mobile screens -->
             <div class="burger-menu" id="burger-menu">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            <!-- Navigation links -->
             <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html" class="link">Home</a></li>
                 <li><a href="explore.html" class="active-link">Explore</a></li>
                 <li><a href="map.html" class="link">Map</a></li>
                 <li><a href="safetytips.html" class="link">Safety Tips</a></li>
             </ul>
+            <!-- Displaying time and temperature -->
             <div class="extra">
-            <ul class="time" id="time">
-                <li id="current-time"></li>
-            </ul>
-            <ul class="temperature" id="temperature">
-                <li id="current-temperature">Loading...</li>
-            </ul>
-        </div>
+                <ul class="time" id="time">
+                    <li id="current-time"></li>
+                </ul>
+                <ul class="temperature" id="temperature">
+                    <li id="current-temperature">Loading...</li>
+                </ul>
+            </div>
         </nav>
     </header>
 
 <main>
+    <!-- Go back button -->
     <div class="go-back">
         <button onclick="history.back()">Go Back</button>
     </div>
 
-
+    <!-- Section with description of the place -->
     <section class="upper-text">
     <div class="container">
         <h2>Lagunazo</h2>
@@ -45,11 +51,13 @@
     </div>
     </section>
 
+    <!-- Gallery with images of the place -->
     <div class="gallery">
         <div class="minimap">
             <div class="preview"></div>
         </div>
         <div class="images">
+            <!-- Multiple images are displayed inside the gallery -->
             <div class="img">
                 <img src="../images/imag1.png" alt="Quebrada quintero 1">
             </div>
@@ -77,96 +85,130 @@
         </div>
     </div>
 
+    <!-- Section with history of Lagunazo -->
     <div class="container">
         <h2>History</h2>
         <p>The name "Lagunazo" is believed to originate from the fact that, thousands of years ago, the area was likely a glacial lagoon, although no signs of a lagoon remain today. The site offers expansive grounds for camping and stunning views, making it a noteworthy spot in El Ávila National Park.</p>
         <p>Lagunazo is also known for its year-round water source and serves as the starting point for the central section of the Fila Maestra, which passes through the Oriental, Occidental, and Naiguata peaks. Over the years, it has become a significant stop for hikers and nature lovers exploring the park. The area’s breathtaking views, including sights of Galipán’s Picacho peak and the Puerto de La Guaira, make it a memorable destination in the heart of El Ávila.</p>
-
-    
     </div>
 </main>
-    <footer class="footer">
-        <p>© 2024 Visit Caracas | Follow us: 
-          <a href="#">Instagram</a> | <a href="#">Facebook</a>
-        </p>
-      </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const numberOfImages = 8;
-    const minimap = document.querySelector(".minimap .preview");
-    const fullSizeContainer = document.querySelector(".images");
+<!-- Footer section with social media links and navigation -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="logo">
+        <img src="../images/logo.svg" alt="Visit Caracas Logo">
+      </div>
+      <div class="social-media">
+        <!-- Social media icons with external links -->
+        <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our TikTok">
+          <img src="../images/tiktok.png" alt="TikTok Icon" >
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram">
+          <img src="../images/instagram.png" alt="Instagram Icon" >
+        </a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook">
+          <img src="../images/facebook.png" alt="Facebook Icon" >
+        </a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Visit our X (Twitter)">
+          <img src="../images/x.png" alt="Twitter Icon" >
+        </a>
+      </div>
+      <!-- Footer navigation links -->
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="safetytips.html">Safety Tips</a></li>
+        </ul>
+      </nav>
+    </div>
+</footer>
 
-    function getRandomLeft() {
-        const values = [-15, -7.5, 0, 7.5, 15];
-        return values[Math.floor(Math.random() * values.length)] + 'px';
-    }
+<!-- External scripts for animations and other functionalities -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    minimap.innerHTML = '';
-    fullSizeContainer.innerHTML = '';
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const numberOfImages = 8;
+        const minimap = document.querySelector(".minimap .preview");
+        const fullSizeContainer = document.querySelector(".images");
 
-    let activeThumbnail = null;
+        // Function to get random positioning for images
+        function getRandomLeft() {
+            const values = [-15, -7.5, 0, 7.5, 15];
+            return values[Math.floor(Math.random() * values.length)] + 'px';
+        }
 
-    for (let i = 1; i <= numberOfImages; i++) {
-        const randomLeft = getRandomLeft();
-        const imagePath = `../images/imag${i}.png`;
+        minimap.innerHTML = '';
+        fullSizeContainer.innerHTML = '';
 
-        // Create thumbnail element
-        const thumbnailDiv = document.createElement('div');
-        thumbnailDiv.className = 'img-thumbnail';
-        thumbnailDiv.style.left = randomLeft;
-        const imgThumbnail = document.createElement('img');
-        imgThumbnail.src = imagePath;
-        thumbnailDiv.appendChild(imgThumbnail);
-        minimap.appendChild(thumbnailDiv);
+        let activeThumbnail = null;
 
-        // Create full-size image element
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'img';
-        imgDiv.style.left = randomLeft;
-        const imgFull = document.createElement('img');
-        imgFull.src = imagePath;
-        imgDiv.appendChild(imgFull);
-        fullSizeContainer.appendChild(imgDiv);
+        // Loop through images and add thumbnails and full-size images
+        for (let i = 1; i <= numberOfImages; i++) {
+            const randomLeft = getRandomLeft();
+            const imagePath = `../images/imag${i}.png`;
 
-        // Register GSAP ScrollTrigger plugin and attach scroll behavior
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-            trigger: imgDiv,
-            start: "top center",
-            end: "bottom center",
-            onToggle: self => {
-                if (self.isActive) {
-                    if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
-                        animateThumbnail(activeThumbnail, false);
+            // Create and append the thumbnail element
+            const thumbnailDiv = document.createElement('div');
+            thumbnailDiv.className = 'img-thumbnail';
+            thumbnailDiv.style.left = randomLeft;
+            const imgThumbnail = document.createElement('img');
+            imgThumbnail.src = imagePath;
+            thumbnailDiv.appendChild(imgThumbnail);
+            minimap.appendChild(thumbnailDiv);
+
+            // Create and append the full-size image element
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'img';
+            imgDiv.style.left = randomLeft;
+            const imgFull = document.createElement('img');
+            imgFull.src = imagePath;
+            imgDiv.appendChild(imgFull);
+            fullSizeContainer.appendChild(imgDiv);
+
+            // Register GSAP ScrollTrigger plugin for scroll-based animation
+            gsap.registerPlugin(ScrollTrigger);
+            ScrollTrigger.create({
+                trigger: imgDiv,
+                start: "top center",
+                end: "bottom center",
+                onToggle: self => {
+                    if (self.isActive) {
+                        // If a different thumbnail is active, animate it
+                        if (activeThumbnail && activeThumbnail !== thumbnailDiv) {
+                            animateThumbnail(activeThumbnail, false);
+                        }
+
+                        animateThumbnail(thumbnailDiv, true);
+                        activeThumbnail = thumbnailDiv;
+                    } else if (activeThumbnail === thumbnailDiv) {
+                        animateThumbnail(thumbnailDiv, false);
                     }
-
-                    animateThumbnail(thumbnailDiv, true);
-                    activeThumbnail = thumbnailDiv;
-                } else if (activeThumbnail === thumbnailDiv) {
-                    animateThumbnail(thumbnailDiv, false);
                 }
-            }
-        });
-    }
+            });
+        }
 
-    function animateThumbnail(thumbnail, isActive) {
-        gsap.to(thumbnail, {
-            border: isActive ? '1px solid #F2FF58' : 'none',
-            opacity: isActive ? 1 : 0.5,
-            scale: isActive ? 1.1 : 1,
-            zIndex: isActive ? 10000 : 1,
-            duration: 0.3
-        });
-    }
-});
-    </script>
-  <script src="/js/scripts.js"></script>
-  <script src="/js/time.js"></script>
-  <script src="/js/temperature.js"></script>
+        // Function to animate the thumbnail (change border, opacity, etc.)
+        function animateThumbnail(thumbnail, isActive) {
+            gsap.to(thumbnail, {
+                border: isActive ? '1px solid #F2FF58' : 'none',
+                opacity: isActive ? 1 : 0.5,
+                scale: isActive ? 1.1 : 1,
+                zIndex: isActive ? 10000 : 1,
+                duration: 0.3
+            });
+        }
+    });
+</script>
+
+<!-- Additional external scripts -->
+<script src="../js/scripts.js"></script>
+<script src="../js/time.js"></script>
+<script src="../js/temperature.js"></script>
 
 </body>
 </html>
